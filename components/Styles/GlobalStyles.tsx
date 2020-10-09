@@ -13,7 +13,8 @@ export const GlobalStyles = createGlobalStyle`
     h3::selection,
     h4::selection,
     p::selection,
-    a::selection {
+    a::selection,
+    span::selection {
       ${tw`text-gray-100 bg-purple-700 bg-opacity-50`}
     }
   }

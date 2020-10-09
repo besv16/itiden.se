@@ -43,24 +43,30 @@ export const AboutIconsGroup = () => (
       <AppIcon />
       <TechHeading>App</TechHeading>
       <TechInfo>
-        Låt en app ta era tjänster till nästa nivå. Vi på Itiden är uppdaterade
-        inom de senaste ramverken och utvecklar till alla platformar.
+        <p>
+          Låt en app ta era tjänster till nästa nivå. Vi på Itiden är uppdaterade
+          inom de senaste ramverken och utvecklar till alla platformar.
+        </p>
       </TechInfo>
     </TechBox>
     <TechBoxMiddle>
       <WebbIcon />
       <TechHeading>Webb</TechHeading>
       <TechInfo>
-        Rätt webblösning för varje behov. Vi hjälper till från grunden med
-        design, UX och rätt teknikval för att skräddarsy just ditt projekt.
+        <p>
+          Rätt webblösning för varje behov. Vi hjälper till från grunden med
+          design, UX och rätt teknikval för att skräddarsy just ditt projekt.
+        </p>
       </TechInfo>
     </TechBoxMiddle>
     <TechBox>
       <SystemIcon />
       <TechHeading>System</TechHeading>
       <TechInfo>
-        Backend, frontend, server, serverless och cloud. Databaser och api etc.
-        Med stor teknisk kunskap hjälper dig med all integration.
+        <p>
+          Backend, frontend, server, serverless och cloud. Databaser och api etc.
+          Med stor teknisk kunskap hjälper dig med all integration.
+        </p>
       </TechInfo>
     </TechBox>
   </TechBoxWrapper>
