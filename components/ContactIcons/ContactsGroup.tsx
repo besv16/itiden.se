@@ -36,7 +36,7 @@ const FindLiteIcon = styled(FindLite)`
 `;
 
 const ContactBoxWrapper = styled.div`
-  ${tw`flex flex-col md:(flex-row justify-between items-start)`};
+  ${tw`flex flex-col md:(flex-row justify-between)`};
   min-width: 463px;
 `;
 
