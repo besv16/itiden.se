@@ -12,3 +12,4 @@ export * from './H4';
 export * from './Paragraph';
 export * from './Hero';
 export * from './Contact';
+export * from './Arrow';

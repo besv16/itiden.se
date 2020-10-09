@@ -6,7 +6,7 @@ import tw from 'twin.macro';
 import { Button } from '../components/Button';
 import { CaseGrid } from '../components/Case';
 import { IndexHeader } from '../components/IndexHeader';
-import { Content, HeaderWide, Page, H1, H3 } from '../components/Layout';
+import { Content, HeaderWide, Page, Arrow, H1, H3 } from '../components/Layout';
 import { Tags } from '../components/Tag';
 import { Case, Page as PageModel } from '../models';
 
@@ -44,10 +44,6 @@ const TagsWrapper = styled.div`
   ${tw`w-full my-10 hidden sm:block`};
 `;
 
-const Arrow = styled.div`
-  ${tw`sm:hidden flex justify-center mb-6`}
-`;
-
 const CaseWrapper = styled.div`
   ${tw`mt-24 md:mt-20`}
 `;
@@ -77,9 +73,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
           <Link href="/kontakt" passHref>
             <Button>Kontakta oss</Button>
           </Link>
-          <Arrow>
-            <img src="/static/arrow.svg" alt="Pil" />
-          </Arrow>
+          <Arrow />
         </Content>
       </HeaderWide>
       <ContentWrapperGray>
