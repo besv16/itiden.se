@@ -14,6 +14,10 @@ const Avatar = styled.img`
 
 const Info = styled.div`
   ${tw`flex flex-col justify-center text-base-links`}
+
+  & p {
+    ${tw`mb-0`}
+  }
 `;
 
 const Link = styled.a`
@@ -41,8 +45,12 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
         <Avatar src={avatarFileUrl} alt={`${name} avatar`} />
       )}
       <Info>
-        <b>{name}</b>
-        {title}
+        <b>
+          <p>{name}</p>
+        </b>
+        <p>
+          {title}
+        </p>
         <Link
           href={`mailto:${email}`}
           onClick={(e: { stopPropagation: () => any }) => e.stopPropagation()}
