@@ -45,7 +45,7 @@ const ContactBox = styled.div`
 `;
 
 const ContactLink = styled.a`
-  ${tw`flex items-center md:flex-col text-gray-300 hover:text-teal-400`}
+  ${tw`flex items-center md:flex-col text-lg no-underline md:text-h3 md:font-bold md:underline text-gray-300 hover:text-teal-400`}
 `;
 
 const ContactInfo = styled.span`
