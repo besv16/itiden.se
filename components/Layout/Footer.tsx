@@ -6,6 +6,10 @@ import { SocialmediaGroupFooter } from '../SocialMediaIcons';
 
 const FooterContainer = styled.footer`
   ${tw`w-full bottom-0 mb-16 mt-24 bg-gray-200 md:(bg-gray-900 mb-0 mt-32 border-solid border-0 border-t border-purple-700)`}
+
+  & p {
+    ${tw`mb-0`}
+  }
 `;
 
 const Container = styled.div`
@@ -68,7 +72,9 @@ export const Footer = () => (
           </a>
         </ItidenContainer>
         <FooterContent>
+          <p>
           Kontakta oss och berätta om dig, <br /> dina behov eller din vision.
+          </p>
         </FooterContent>
         <ContactContainer>
           <ContactLink href="tel:0709-597008">
@@ -83,7 +89,9 @@ export const Footer = () => (
       <Wrapper>
         <ContactLink href="https://goo.gl/maps/Dqa7A3jFhuyatxjC8">
           <Address>
-            Kungstorget 11–12 <br /> 411 41 Göteborg
+            <p>
+              Kungstorget 11–12 <br /> 411 41 Göteborg
+            </p>
           </Address>
         </ContactLink>
         <SocialmediaGroupFooter />
