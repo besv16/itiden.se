@@ -33,7 +33,7 @@ const TechHeading = styled(H3)`
 `;
 
 const TechInfo = styled.div`
-  ${tw`text-center`}
+  ${tw`text-center text-gray-300`}
   max-width: 327px;
 `;
 
