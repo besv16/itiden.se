@@ -7,6 +7,7 @@ import { Button } from '../components/Button';
 import { CaseGrid } from '../components/Case';
 import { IndexHeader } from '../components/IndexHeader';
 import { Content, HeaderWide, Page, H1, H3 } from '../components/Layout';
+import { PongAnimation } from '../components/PongAnimation/PongAnimation';
 import { Tags } from '../components/Tag';
 import { Case, Page as PageModel } from '../models';
 
@@ -82,6 +83,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
           </Arrow>
         </Content>
       </HeaderWide>
+      <PongAnimation />
       <ContentWrapperGray>
         <Content>
           <ContentCentered>
@@ -107,15 +109,15 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
         </Content>
       </ContentWrapperPurple>
       <CaseWrapper>
-      <Content>
-      <H3>Case</H3>
-      <CaseGrid cases={cases} />
-        <ParagraphCentered>
-          <Link href="/case" passHref>
-            <Button>Gå till Case</Button>
-          </Link>
-        </ParagraphCentered>
-      </Content>
+        <Content>
+          <H3>Case</H3>
+          <CaseGrid cases={cases} />
+          <ParagraphCentered>
+            <Link href="/case" passHref>
+              <Button>Gå till Case</Button>
+            </Link>
+          </ParagraphCentered>
+        </Content>
       </CaseWrapper>
     </Page>
   );
