@@ -6,11 +6,13 @@ import { withRouter, NextRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
-import { Content, Contact, Page, H2 } from '../../components/Layout';
+import { Content, Contact, Page, H2, H3 } from '../../components/Layout';
 import { Tags } from '../../components/Tag';
 import { Case } from '../../models/Case';
+import { CaseGrid } from '../../components/Case';
 
 interface CasePageProps {
+  cases: Case[];
   data?: Case;
   router: NextRouter;
 }
@@ -66,7 +68,7 @@ const Information = styled.div`
   }
 `;
 
-const CasePage = ({ data }: CasePageProps) => {
+const CasePage = ({ data, cases }: CasePageProps) => {
   if (!data) {
     return null;
   }
@@ -129,6 +131,13 @@ const CasePage = ({ data }: CasePageProps) => {
         ) : ''}
       </ContentMedia>
       <Contact />
+      <Content>
+        <H3
+          css={`${tw`mt-4`}`}
+        >
+          Fler case</H3>
+        <CaseGrid cases={cases.filter(c => !c.labs)} />
+      </Content>
     </Page>
   );
 };
@@ -136,7 +145,7 @@ const CasePage = ({ data }: CasePageProps) => {
 CasePage.getInitialProps = async ({ query }: NextPageContext) => {
   const cases = await import('../../data/data/case.json').then(m => m.default);
   const data = cases.find(c => c.slug === query.slug);
-  return { data };
+  return { cases, data };
 };
 
 export default withRouter(CasePage);
