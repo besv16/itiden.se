@@ -21,6 +21,7 @@ const Wrapper = styled.a<{ active: boolean }>`
 
 export const NavLink = withRouter<NavLinkProps, {}>(
   ({ children, router, ...rest }) => {
+    router.route = router.route.replace(/[\/][\[][a-z]*[\]]/, '');
     const active: boolean = router ? router.route === rest.href : false;
     return (
       <Link {...rest}>
