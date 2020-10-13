@@ -22,6 +22,13 @@ const Marker = styled(Pin)`
   ${tw`-translate-x-1/2 -translate-y-full`}
 `;
 
+function renderMarker(map, maps, location: object) {
+  const marker = new maps.Marker({
+    position: location,
+    map,
+  });
+}
+
 export const Map = ({ location, zoomLevel }: LocationProps) => {
   const center = { lat: 57.7025937, lng: 11.965612 };
   return (
@@ -33,10 +40,9 @@ export const Map = ({ location, zoomLevel }: LocationProps) => {
         defaultCenter={center}
         defaultZoom={zoomLevel}
         options={{ styles: mapStyle }}
+        onGoogleApiLoaded={({map, maps}) => renderMarker(map, maps, location)}
+        yesIWantToUseGoogleMapApiInternals
       >
-        <div {...location}>
-          <Marker />
-        </div>
       </GoogleMapReact>
     </MapContainer>
   );

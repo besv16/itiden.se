@@ -56,8 +56,8 @@ const Divider = styled.div`
 `;
 
 const location = {
-  lat: 57.703771,
-  lng: 11.9687671,
+  lat: 57.703480,
+  lng: 11.96750,
 };
 
 const zoomLevel = 15;
