@@ -22,6 +22,7 @@ function renderMarker(map: any, maps: any, location: object) {
     position: location,
     map,
   });
+  return marker;
 }
 
 export const Map = ({ location, zoomLevel }: LocationProps) => {
