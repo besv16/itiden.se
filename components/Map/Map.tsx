@@ -17,7 +17,7 @@ const MapContainer = styled.div`
   height: 475px;
 `;
 
-function renderMarker(map, maps, location: object) {
+function renderMarker(map: any, maps: any, location: object) {
   const marker = new maps.Marker({
     position: location,
     map,
