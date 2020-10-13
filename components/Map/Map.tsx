@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import GoogleMapReact from 'google-map-react';
-import { Pin } from './Pin';
 import mapStyle from '../../public/static/mapStyle.json';
 
 type LocationProps = {
@@ -16,10 +15,6 @@ type LocationProps = {
 const MapContainer = styled.div`
   ${tw`flex justify-center w-full`}
   height: 475px;
-`;
-
-const Marker = styled(Pin)`
-  ${tw`-translate-x-1/2 -translate-y-full`}
 `;
 
 function renderMarker(map, maps, location: object) {
