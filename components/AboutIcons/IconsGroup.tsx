@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { App, System, Webb } from '../AboutIcons';
-import { H3 } from '../Layout';
+import { H3, Content } from '../Layout';
 
 const AppIcon = styled(App)`
   ${tw``};
@@ -17,7 +17,7 @@ const WebbIcon = styled(Webb)`
 `;
 
 const TechBoxWrapper = styled.div`
-  ${tw`mx-6 max-w-screen-lg flex flex-col md:(flex-row justify-between mx-6) lg:mx-auto`};
+  ${tw`flex flex-col md:(flex-row justify-between mx-6)`};
 `;
 
 const TechBox = styled.div`
@@ -38,36 +38,38 @@ const TechInfo = styled.div`
 `;
 
 export const AboutIconsGroup = () => (
-  <TechBoxWrapper>
-    <TechBox>
-      <AppIcon />
-      <TechHeading>App</TechHeading>
-      <TechInfo>
-        <p>
-          Låt en app ta era tjänster till nästa nivå. Vi på Itiden är uppdaterade
-          inom de senaste ramverken och utvecklar till alla platformar.
-        </p>
-      </TechInfo>
-    </TechBox>
-    <TechBoxMiddle>
-      <WebbIcon />
-      <TechHeading>Webb</TechHeading>
-      <TechInfo>
-        <p>
-          Rätt webblösning för varje behov. Vi hjälper till från grunden med
-          design, UX och rätt teknikval för att skräddarsy just ditt projekt.
-        </p>
-      </TechInfo>
-    </TechBoxMiddle>
-    <TechBox>
-      <SystemIcon />
-      <TechHeading>System</TechHeading>
-      <TechInfo>
-        <p>
-          Backend, frontend, server, serverless och cloud. Databaser och api etc.
-          Med stor teknisk kunskap hjälper dig med all integration.
-        </p>
-      </TechInfo>
-    </TechBox>
-  </TechBoxWrapper>
+  <Content>
+    <TechBoxWrapper>
+      <TechBox>
+        <AppIcon />
+        <TechHeading>App</TechHeading>
+        <TechInfo>
+          <p>
+            Låt en app ta era tjänster till nästa nivå. Vi på Itiden är uppdaterade
+            inom de senaste ramverken och utvecklar till alla platformar.
+          </p>
+        </TechInfo>
+      </TechBox>
+      <TechBoxMiddle>
+        <WebbIcon />
+        <TechHeading>Webb</TechHeading>
+        <TechInfo>
+          <p>
+            Rätt webblösning för varje behov. Vi hjälper till från grunden med
+            design, UX och rätt teknikval för att skräddarsy just ditt projekt.
+          </p>
+        </TechInfo>
+      </TechBoxMiddle>
+      <TechBox>
+        <SystemIcon />
+        <TechHeading>System</TechHeading>
+        <TechInfo>
+          <p>
+            Backend, frontend, server, serverless och cloud. Databaser och api etc.
+            Med stor teknisk kunskap hjälper dig med all integration.
+          </p>
+        </TechInfo>
+      </TechBox>
+    </TechBoxWrapper>
+  </Content>
 );
