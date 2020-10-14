@@ -93,7 +93,7 @@ const ItidenWrapperDesktop = styled.div`
 `;
 
 const ItidenWrapperMobile = styled.div`
-  ${tw`block md:hidden mt-20 mb-24`}
+  ${tw`block md:hidden mt-20 mb-0 sm:mb-24`}
 `;
 
 const A = styled.a`
