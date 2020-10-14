@@ -47,7 +47,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
       <Content>
         <CaseGrid cases={cases.filter(c => !c.labs)} />
       </Content>
-      <ContentWrapper paddingTop={'4rem'} paddingBottom={'0.5rem'}>
+      <ContentWrapper paddingTop={'6rem'} paddingBottom={'0.5rem'} id="lab">
         <Content>
           <H3>Itiden Lab</H3>
           <Paragraph>
