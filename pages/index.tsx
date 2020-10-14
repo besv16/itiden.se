@@ -28,7 +28,7 @@ const ContentCentered = styled.div`
   text-align: center;
   ${tw`lg:mx-48`}
   & a {
-    ${tw`text-gray-100 text-lg sm:text-xl sm:font-semibold`}
+    ${tw`text-gray-100 text-lg sm:text-xl sm:font-semibold hover:(text-gray-100 no-underline)`}
   }
 `;
 
@@ -96,7 +96,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
       <ContentWrapperPurple>
         <Content>
           <ContentCentered>
-            <Link href="/case" passHref>
+            <Link href="/om" passHref>
               Läs mer om hur vi jobbar
             </Link>
           </ContentCentered>
