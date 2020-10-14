@@ -17,7 +17,7 @@ const WebbIcon = styled(Webb)`
 `;
 
 const TechBoxWrapper = styled.div`
-  ${tw`flex flex-col md:(flex-row justify-between mx-6)`};
+  ${tw`flex flex-col md:(flex-row justify-between)`};
 `;
 
 const TechBox = styled.div`
