@@ -1,15 +1,14 @@
 import { NextComponentType } from 'next';
+import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { IndexHeader } from '../components/IndexHeader';
 import { AboutIconsGroup } from '../components/AboutIcons';
-import { Header, Page, Content, Paragraph, Hero, H3 } from '../components/Layout';
+import { Header, Page, Content, Paragraph, Hero, H3, Contact } from '../components/Layout';
 
 const ContentWrapperMobile = styled.div`
-  ${tw`md:hidden`};
-  padding-top: ${(props: { paddingTop: string }) => props.paddingTop};
-  padding-bottom: ${(props: { paddingBottom: string }) => props.paddingBottom};
+  ${tw`md:hidden pt-24`};
 `;
 const ContentWrapperDesktop = styled.div`
   ${tw`hidden md:block mt-20 pt-3`};
@@ -20,7 +19,14 @@ const GrayBanner = styled(Hero)`
 `;
 
 const QuarteredParagraph = styled(Paragraph)`
-  ${tw`w-2/3`}
+  ${tw`w-2/3 mb-3 mt-1`}
+`;
+
+const WideParagraph = styled(Paragraph)`
+  @media (max-width: 767px) {
+    ${tw`mt-0`}
+    font-size: ${(props: { primary: boolean; }) => props.primary ? '18px' : '16px'}
+  }
 `;
 
 const KeywordsWrapperDesktop = styled.div`
@@ -47,6 +53,57 @@ const Keyword = styled.p`
   ${tw`text-base mb-1 pr-2`}
 `;
 
+const TechWrapper = styled.div`
+  ${tw`bg-yellow py-10 sm:(py-24)`}
+
+  & img {
+    width: 100%;
+  }
+`;
+
+const TechLarge = styled.div`
+  ${tw`mx-auto hidden lg:block`}
+  max-width: 712px;
+`;
+
+const TechMedium = styled.div`
+  ${tw`mx-auto lg:hidden`}
+  max-width: 546px;
+
+  @media (max-width: 520px) {
+    display: none;
+  }
+
+  @media (min-width: 520px) and (max-width: 1079px) {
+    display: block;
+  }
+`;
+
+const TechSmall = styled.div`
+  ${tw`mx-auto hidden`}
+  max-width: 320px;
+
+  @media (max-width: 519px) {
+    display: block;
+  }
+`;
+
+const ItidenWrapper = styled.div`
+  ${tw`mt-20 mb-24 sm:my-32`}
+`;
+
+const ItidenWrapperDesktop = styled.div`
+  ${tw`hidden md:block my-32`}
+`;
+
+const ItidenWrapperMobile = styled.div`
+  ${tw`block md:hidden mt-20 mb-24`}
+`;
+
+const A = styled.a`
+  ${tw`text-base text-teal-400 underline hover:(text-gray-100)`}
+`;
+
 const IndexPage: NextComponentType<{}, {}> = () => {
   return (
     <Page>
@@ -54,8 +111,10 @@ const IndexPage: NextComponentType<{}, {}> = () => {
       <Header role="banner">
         <ContentWrapperMobile>
           <Content>
-            <H3>Kunskap genom insikt och erfarenhet</H3>
-            <Paragraph>
+            <H3>
+              Kunskap genom insikt och erfarenhet
+            </H3>
+            <WideParagraph primary>
               För att ett projekt – vare sig det gäller för appar, webb eller
               andra tekniska lösningar – skall bli så bra som möjligt krävs
               insikter. Därför tycker vi det är viktigt att vara med tidigt i
@@ -66,7 +125,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
               gång är du delaktig hela vägen i produktionen fram till färdig
               produkt. På detta vis kan vi ta snabba beslut om förutsättningar
               för projektet förändras och vi kan tillsammans nå önskat resultat.
-            </Paragraph>
+            </WideParagraph>
           </Content>
         </ContentWrapperMobile>
       </Header>
@@ -132,50 +191,131 @@ const IndexPage: NextComponentType<{}, {}> = () => {
               förändras och vi kan tillsammans nå önskat resultat.
             </QuarteredParagraph>
             <KeywordsWrapperDesktop>
-            <H3>Itiden förenklat</H3>
-            <Keywords>
-              <KeywordsGroup>
-                <Keyword>Utveckling</Keyword>
-                <Keyword>Integration</Keyword>
-                <Keyword>Strategi</Keyword>
-                <Keyword>Design</Keyword>
-              </KeywordsGroup>
-              <KeywordsGroup>
-                <Keyword>Projektledning</Keyword>
-                <Keyword>Research</Keyword>
-                <Keyword>API</Keyword>
-                <Keyword>SEO</Keyword>
-              </KeywordsGroup>
-              <KeywordsGroup>
-                <Keyword>UX</Keyword>
-                <Keyword>UI</Keyword>
-                <Keyword>CMS</Keyword>
-                <Keyword>Wordpress</Keyword>
-              </KeywordsGroup>
-              <KeywordsGroup>
-                <Keyword>E-handel</Keyword>
-                <Keyword>React</Keyword>
-                <Keyword>React Native</Keyword>
-                <Keyword>AR</Keyword>
-              </KeywordsGroup>
-              <KeywordsGroup>
-                <Keyword>HTML</Keyword>
-                <Keyword>CSS</Keyword>
-                <Keyword>Arduino</Keyword>
-                <Keyword>Prototyper</Keyword>
-              </KeywordsGroup>
-              <KeywordsGroup>
-                <Keyword>Wireframes</Keyword>
-                <Keyword>Responsivt</Keyword>
-                <Keyword>Android</Keyword>
-                <Keyword>iOS</Keyword>
-              </KeywordsGroup>
-            </Keywords>
+              <H3>Itiden förenklat</H3>
+              <Keywords>
+                <KeywordsGroup>
+                  <Keyword>Utveckling</Keyword>
+                  <Keyword>Integration</Keyword>
+                  <Keyword>Strategi</Keyword>
+                  <Keyword>Design</Keyword>
+                </KeywordsGroup>
+                <KeywordsGroup>
+                  <Keyword>Projektledning</Keyword>
+                  <Keyword>Research</Keyword>
+                  <Keyword>API</Keyword>
+                  <Keyword>SEO</Keyword>
+                </KeywordsGroup>
+                <KeywordsGroup>
+                  <Keyword>UX</Keyword>
+                  <Keyword>UI</Keyword>
+                  <Keyword>CMS</Keyword>
+                  <Keyword>Wordpress</Keyword>
+                </KeywordsGroup>
+                <KeywordsGroup>
+                  <Keyword>E-handel</Keyword>
+                  <Keyword>React</Keyword>
+                  <Keyword>React Native</Keyword>
+                  <Keyword>AR</Keyword>
+                </KeywordsGroup>
+                <KeywordsGroup>
+                  <Keyword>HTML</Keyword>
+                  <Keyword>CSS</Keyword>
+                  <Keyword>Arduino</Keyword>
+                  <Keyword>Prototyper</Keyword>
+                </KeywordsGroup>
+                <KeywordsGroup>
+                  <Keyword>Wireframes</Keyword>
+                  <Keyword>Responsivt</Keyword>
+                  <Keyword>Android</Keyword>
+                  <Keyword>iOS</Keyword>
+                </KeywordsGroup>
+              </Keywords>
             </KeywordsWrapperDesktop>
           </Content>
         </ContentWrapperDesktop>
+        <TechWrapper>
+          <Content>
+            <TechLarge>
+              <img src="/static/ikoner-svg-lg.png" alt="Pil" />
+            </TechLarge>
+            <TechMedium>
+              <img src="/static/ikoner-svg-md.png" alt="Pil" />
+            </TechMedium>
+            <TechSmall>
+              <img src="/static/ikoner-svg-sm.png" alt="Pil" />
+            </TechSmall>
+          </Content>
+        </TechWrapper>
+        <ItidenWrapperMobile>
+          <Content>
+            <H3
+              css={`${tw`mt-24`}`}
+            >
+              Varför gör vi det vi gör
+            </H3>
+            <WideParagraph>
+              Itiden startades för över 20 år sedan av nyfikna teknikentusiaster som brann för allt som har med webbutveckling och digitala tekniker att göra. Detta är än idag kärnan i vår verksamhet. Vi håller oss uppdaterade inom de senaste metoderna i en ständigt förändrande landskap och har som mål att alltid ligga i framkant samt ha god kännedom om rådande tekniska möjligheter. 
+            </WideParagraph>
+            <WideParagraph>
+              Vi värdesätter personlig utveckling och förutom kundprojekt arbetar vi därför med en del egna experiment eller produkter, ibland som fortbildning och ibland bara för att det är kul. Detta kallar vi <Link href={`/case/#lab`} passHref><A>Itiden Lab</A></Link> och kan utforskas mer <Link href={`/case/#lab`} passHref><A>här</A></Link>. Vi har genom åren också märkt att en trivsam miljö ofta leder till bättre resultat varför vi även har en liten musikstudio med olika instrument, tillgång till pingisbord samt kör löpande miniturneringar i tv-spel.
+            </WideParagraph>
+            <H3
+              css={`${tw`mt-10`}`}
+            >
+              Itiden i framtiden
+            </H3>
+            <WideParagraph>
+              Itiden är stolta över att vara med och forma framtiden i vår bransch. Med nästan tio års långt deltagande i ledningsgruppen för utbildningen Webbutvecklare på Yrgo och kurser inom React och React Native är vi med och stöttar och vägleder nya och avancerade utvecklare.
+            </WideParagraph>
+
+            <H3
+              css={`${tw`mt-10`}`}
+            >
+              Kom och hälsa på oss
+            </H3>
+            <WideParagraph>
+              Vi sitter centralt beläget i Göteborg på <A href="https://goo.gl/maps/Dqa7A3jFhuyatxjC8">Kungstorget 11–12</A>. Du är varm välkommen att komma in till oss på en kopp kaffe för att lära känna oss lite bättre. Det finns bra parkeringsmöjligheter precis utanför kontoret. Åker man med kollektivtrafiken går man av vid Kungsportsplatsen. Vi är alltid intresserade av intressanta sammarbeten och bra folk så hör gärna av dig vi <A href="tel:0709-597008">telefon</A> eller <A href="mailto:hej@itiden.se">mail</A>.
+            </WideParagraph>
+          </Content>
+        </ItidenWrapperMobile>
+
+        <ItidenWrapperDesktop>
+          <Content>
+            <H3
+              css={`${tw`mt-24`}`}
+            >
+              Varför gör vi det vi gör
+            </H3>
+            <QuarteredParagraph>
+              Itiden startades för över 20 år sedan av nyfikna teknikentusiaster som brann för allt som har med webbutveckling och digitala tekniker att göra. Detta är än idag kärnan i vår verksamhet. Vi håller oss uppdaterade inom de senaste metoderna i en ständigt förändrande landskap och har som mål att alltid ligga i framkant samt ha god kännedom om rådande tekniska möjligheter. 
+            </QuarteredParagraph>
+            <QuarteredParagraph>
+              Vi värdesätter personlig utveckling och förutom kundprojekt arbetar vi därför med en del egna experiment eller produkter, ibland som fortbildning och ibland bara för att det är kul. Detta kallar vi <Link href={`/case/#lab`} passHref><A>Itiden Lab</A></Link> och kan utforskas mer <Link href={`/case/#lab`} passHref><A>här</A></Link>. Vi har genom åren också märkt att en trivsam miljö ofta leder till bättre resultat varför vi även har en liten musikstudio med olika instrument, tillgång till pingisbord samt kör löpande miniturneringar i tv-spel.
+            </QuarteredParagraph>
+            <H3
+              css={`${tw`mt-10`}`}
+            >
+              Itiden i framtiden
+            </H3>
+            <QuarteredParagraph>
+              Itiden är stolta över att vara med och forma framtiden i vår bransch. Med nästan tio års långt deltagande i ledningsgruppen för utbildningen Webbutvecklare på Yrgo och kurser inom React och React Native är vi med och stöttar och vägleder nya och avancerade utvecklare.
+            </QuarteredParagraph>
+
+            <H3
+              css={`${tw`mt-10`}`}
+            >
+              Kom och hälsa på oss
+            </H3>
+            <QuarteredParagraph>
+              Vi sitter centralt beläget i Göteborg på <A href="https://goo.gl/maps/Dqa7A3jFhuyatxjC8">Kungstorget 11–12</A>. Du är varm välkommen att komma in till oss på en kopp kaffe för att lära känna oss lite bättre. Det finns bra parkeringsmöjligheter precis utanför kontoret. Åker man med kollektivtrafiken går man av vid Kungsportsplatsen. Vi är alltid intresserade av intressanta sammarbeten och bra folk så hör gärna av dig vi <A href="tel:0709-597008">telefon</A> eller <A href="mailto:hej@itiden.se">mail</A>.
+            </QuarteredParagraph>
+          </Content>
+        </ItidenWrapperDesktop>
+
+        <Contact blue />
     </Page>
   );
 };
 
 export default IndexPage;
+
