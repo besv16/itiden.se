@@ -97,7 +97,7 @@ const ItidenWrapperMobile = styled.div`
 `;
 
 const A = styled.a`
-  ${tw`text-base text-teal-400 underline hover:(text-gray-100)`}
+  ${tw`text-base-links sm:(text-xl font-semibold) text-teal-400 underline hover:(text-gray-100)`}
 `;
 
 const IndexPage: NextComponentType<{}, {}> = () => {
