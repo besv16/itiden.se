@@ -130,10 +130,10 @@ const CasePage = ({ data, cases }: CasePageProps) => {
           <MediaWrapper desktopImage={desktopMedia[2].file.url} mobileImage={mobileMedia[2].file.url}/>
         ) : ''}
       </ContentMedia>
-      <Contact />
+      <Contact green />
       <Content>
         <H3
-          css={`${tw`mt-4`}`}
+          css={`${tw`mt-32`}`}
         >
           Fler case</H3>
         <CaseGrid cases={cases.filter(c => !c.labs)} />
