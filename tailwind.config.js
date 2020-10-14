@@ -46,11 +46,11 @@ module.exports = {
           700: '#504DD2',
         },
         teal: {
-          400: '#5CFFF5',
+          400: '#22FFF2',
         },
-        green: '#5CFF8A',
-        red: '#D24D4D',
-        yellow: '#FFDB5C',
+        green: '#69F569',
+        red: '#DE4242',
+        yellow: '#FFD15C',
       },
       fill: {
         logo: '#242424',
