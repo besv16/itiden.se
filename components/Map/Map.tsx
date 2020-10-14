@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import GoogleMapReact from 'google-map-react';
+import { Pin } from './Pin';
 import mapStyle from '../../public/static/mapStyle.json';
 
 type LocationProps = {
@@ -17,13 +18,9 @@ const MapContainer = styled.div`
   height: 475px;
 `;
 
-function renderMarker(map: any, maps: any, location: object) {
-  const marker = new maps.Marker({
-    position: location,
-    map,
-  });
-  return marker;
-}
+const Marker = styled(Pin)`
+  ${tw`-translate-x-1/2 -translate-y-full`}
+`;
 
 export const Map = ({ location, zoomLevel }: LocationProps) => {
   const center = { lat: 57.7025937, lng: 11.965612 };
@@ -36,9 +33,10 @@ export const Map = ({ location, zoomLevel }: LocationProps) => {
         defaultCenter={center}
         defaultZoom={zoomLevel}
         options={{ styles: mapStyle }}
-        onGoogleApiLoaded={({map, maps}) => renderMarker(map, maps, location)}
-        yesIWantToUseGoogleMapApiInternals
       >
+        <div {...location}>
+          <Marker />
+        </div>
       </GoogleMapReact>
     </MapContainer>
   );
