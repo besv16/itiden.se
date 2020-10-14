@@ -100,6 +100,22 @@ const A = styled.a`
   ${tw`text-base-links sm:(text-xl font-semibold) text-teal-400 underline hover:(text-gray-100)`}
 `;
 
+const ImageWrapperMobile = styled.div`
+  ${tw`block md:hidden`}
+
+  & img {
+    ${tw`w-full`}
+  }
+`;
+
+const ImageWrapperDesktop = styled.div`
+  ${tw`hidden md:block`}
+
+  & img {
+    ${tw`w-full`}
+  }
+`;
+
 const IndexPage: NextComponentType<{}, {}> = () => {
   return (
     <Page>
@@ -243,9 +259,12 @@ const IndexPage: NextComponentType<{}, {}> = () => {
           </Content>
         </TechWrapper>
         <ItidenWrapperMobile>
+          <ImageWrapperMobile>
+            <img src="/static/soffa-mobil.jpg"></img>
+          </ImageWrapperMobile>
           <Content>
             <H3
-              css={`${tw`mt-24`}`}
+              css={`${tw`mt-20 sm:(mt-24)`}`}
             >
               Varför gör vi det vi gör
             </H3>
@@ -277,6 +296,9 @@ const IndexPage: NextComponentType<{}, {}> = () => {
 
         <ItidenWrapperDesktop>
           <Content>
+            <ImageWrapperDesktop>
+              <img src="/static/soffa-desktop.jpg"></img>
+            </ImageWrapperDesktop>
             <H3
               css={`${tw`mt-24`}`}
             >
