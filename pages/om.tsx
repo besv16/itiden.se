@@ -88,10 +88,6 @@ const TechSmall = styled.div`
   }
 `;
 
-const ItidenWrapper = styled.div`
-  ${tw`mt-20 mb-24 sm:my-32`}
-`;
-
 const ItidenWrapperDesktop = styled.div`
   ${tw`hidden md:block my-32`}
 `;
