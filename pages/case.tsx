@@ -12,18 +12,22 @@ interface IndexPageProps {
   cases: Case[];
 }
 
-const ContentWrapper = styled.div`
-  padding-top: ${(props: { paddingTop: string }) => props.paddingTop};
-  padding-bottom: ${(props: { paddingBottom: string }) => props.paddingBottom};
+const ContentWrapper = styled.div<{
+  paddingTop: string;
+  paddingBottom: string;
+}>`
+  padding-top: ${props => props.paddingTop};
+  padding-bottom: ${props => props.paddingBottom};
 `;
 
 const CaseGridWrapper = styled.div`
   ${tw`mt-16 md:mt-6`}
 `;
 
-const Paragraph = styled.p`
+const Paragraph = styled.p<{ paddingBottom?: string }>`
   ${tw`text-lg text-gray-300 mt-1 sm:text-xl w-full md:w-3/4 lg:w-3/5`}
-  padding-bottom: ${(props: { paddingBottom: string }) => props.paddingBottom};
+  ${props =>
+    props.paddingBottom != null && `padding-bottom: ${props.paddingBottom}`};
 
   @media (max-width: 767px) {
     margin-bottom: 0;

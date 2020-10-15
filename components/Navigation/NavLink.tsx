@@ -14,7 +14,7 @@ interface NavLinkProps {
 
 const Wrapper = styled.a<{ active: boolean }>`
   ${tw`whitespace-no-wrap py-5 inline-block text-gray-100 font-light text-base outline-none hover:no-underline hover:text-teal-400 leading-snug`};
-  ${({ active }: any) => active && tw`font-bold lowercase`};
+  ${({ active }) => active && tw`font-bold lowercase`};
   text-decoration: none;
   transition: color 0.2s;
 `;

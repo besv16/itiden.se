@@ -48,23 +48,13 @@ export const ProfileCard: React.FC<ProfileCardProps> = ({
         <b>
           <p>{name}</p>
         </b>
-        <p>
-          {title}
-        </p>
-        <Link
-          href={`mailto:${email}`}
-          onClick={(e: { stopPropagation: () => any }) => e.stopPropagation()}
-        >
+        <p>{title}</p>
+        <Link href={`mailto:${email}`} onClick={e => e.stopPropagation()}>
           {email}
         </Link>
         {phone && (
           <>
-            <Link
-              href={`tel:${phone}`}
-              onClick={(e: { stopPropagation: () => any }) =>
-                e.stopPropagation()
-              }
-            >
+            <Link href={`tel:${phone}`} onClick={e => e.stopPropagation()}>
               {phone}
             </Link>
           </>

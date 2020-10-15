@@ -1,8 +1,7 @@
 import data from './data/case.json';
 import { Case } from '../models/Case';
-
-const path = require('path');
-const fs = require('fs');
+import path from 'path';
+import fs from 'fs';
 
 export function getCases(): Case[] {
   return data as Case[];

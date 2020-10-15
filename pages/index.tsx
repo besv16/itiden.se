@@ -9,7 +9,7 @@ import { IndexHeader } from '../components/IndexHeader';
 import { PongAnimation } from '../components/PongAnimation/PongAnimation';
 import { Content, HeaderWide, Page, Arrow, H1, H3 } from '../components/Layout';
 import { Tags } from '../components/Tag';
-import { Case, Page as PageModel } from '../models';
+import { Case } from '../models';
 import { getCasesFromJson } from '../data/case';
 
 interface IndexPageProps {

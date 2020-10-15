@@ -1,7 +1,6 @@
 import { Employee } from '../models/Employee';
-
-const path = require('path');
-const fs = require('fs');
+import path from 'path';
+import fs from 'fs';
 
 export function getEmployeesFromJson(): Employee[] {
   const jsonPath = path.join(process.cwd(), 'data', 'data', 'employee.json');

@@ -17,7 +17,7 @@ const HeaderWrapper = styled.div`
   ${tw`w-full bg-gray-800 bg-opacity-90 md:fixed`}
 `;
 
-const Content = styled.div`
+const Content = styled.div<HeaderProps>`
   ${tw`flex px-6 md:px-5 items-center justify-center flex-col md:flex-row md:justify-between md:items-baseline flex-wrap pt-6 sm:pt-5`};
   max-width: 1120px;
 
@@ -26,7 +26,7 @@ const Content = styled.div`
   }
 
   @media (max-width: 767px) {
-    height: ${(props: { noLogoFnutt: boolean; }) => props.noLogoFnutt ? '0px' : '80px'};
+    height: ${(props: HeaderProps) => (props.noLogoFnutt ? '0px' : '80px')};
   }
 
   @media (min-width: 1120px) {
@@ -77,9 +77,7 @@ export const Header: React.FC<HeaderProps> = props => {
         <Link href="/">
           <a aria-label="itiden.se">
             <HeaderLogo />
-            { !props.noLogoFnutt && 
-              <HeaderLogoFnutt />
-            }
+            {!props.noLogoFnutt && <HeaderLogoFnutt />}
           </a>
         </Link>
         <Menu>

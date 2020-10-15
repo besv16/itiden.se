@@ -43,14 +43,14 @@ const ResponsiveMediaWrapper = styled.div.attrs<MediaWrapperProps>(
   ${tw`bg-center bg-contain bg-no-repeat bg-100%`}
 `;
 
-const MediaDesktopWrapper = styled(ResponsiveMediaWrapper)`
+const MediaDesktopWrapper = styled(ResponsiveMediaWrapper)<MediaWrapperProps>`
   padding-top: 56.25%;
   @media all and (max-width: 479px) {
     display: none;
   }
 `;
 
-const MediaMobileWrapper = styled(ResponsiveMediaWrapper)`
+const MediaMobileWrapper = styled(ResponsiveMediaWrapper)<MediaWrapperProps>`
   @media all and (min-width: 480px) {
     display: none;
   }
@@ -201,7 +201,7 @@ export const getStaticProps: GetStaticProps<Omit<
   const cases = getCasesFromJson();
   return {
     props: {
-      selectedCase: cases.find(c => c.slug === context.params.slug),
+      selectedCase: cases.find(c => c.slug === context?.params?.slug),
       cases,
     },
   };
