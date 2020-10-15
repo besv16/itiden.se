@@ -94,9 +94,8 @@ const LazyImage: React.FC<{
   return (
     <Image
       alt={media.title}
-      src={`${url}?q=10&w=1404`}
       data-src={`${url}?q=100&w=1404`}
-      className="lazyload blur-up"
+      className="lazyload"
     />
   );
 };

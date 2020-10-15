@@ -33,15 +33,4 @@ export const GlobalStyles = createGlobalStyle`
   a {
     ${tw`underline`}
   }
-  
-  .blur-up {
-    -webkit-filter: blur(5px);
-    filter: blur(5px);
-    transition: all 0.5s;
-  }
-
-  .blur-up.lazyloaded {
-    -webkit-filter: blur(0);
-    filter: blur(0);
-  }
 `;
