@@ -92,17 +92,16 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({
         <h2>Medarbetare</h2>
         <EmployeesWrapper>
           {employees.map(employee => (
-            <>
+            <React.Fragment key={employee.id}>
               <ProfileCard
-                key={employee.id}
                 name={employee.name}
                 title={employee.title}
                 email={employee.email}
                 phone={employee.phone}
                 avatarFileUrl={employee.avatar?.file.url}
               />
-              <Divider key={employee.name} />
-            </>
+              <Divider />
+            </React.Fragment>
           ))}
         </EmployeesWrapper>
       </ContentWrapper>
