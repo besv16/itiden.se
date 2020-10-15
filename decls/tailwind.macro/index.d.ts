@@ -1,12 +1,20 @@
+// twin.d.ts
+import 'twin.macro';
+import styledImport, { CSSProp, css as cssImport } from 'styled-components';
+
 declare module 'twin.macro' {
-  type TailwindComponentFactories<T extends object> = {
-    [TTag in keyof JSX.IntrinsicElements]: ThemedStyledFunction<TTag, T>;
-  };
-  // type TailwindComponentFactories = ThemedStyledComponen
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  function tw(...args: any[]);
+  // The styled and css imports
+  const styled: typeof styledImport;
+  const css: typeof cssImport;
+}
 
-  declare const tailwind: tw | TailwindComponentFactories;
-
-  export default tailwind;
+declare module 'react' {
+  // The css prop
+  interface HTMLAttributes<T> extends DOMAttributes<T> {
+    css?: CSSProp;
+  }
+  // The inline svg css prop
+  interface SVGProps<T> extends SVGProps<SVGSVGElement> {
+    css?: CSSProp;
+  }
 }
