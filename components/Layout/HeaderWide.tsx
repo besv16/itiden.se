@@ -7,7 +7,7 @@ export const HeaderWide = styled.div`
 
   @media (max-width: 767px) {
     ${tw`justify-end`}
-    margin-top: -183px;
+    margin-top: -144px;
   }
   & p {
     ${tw`w-full md:w-3/4 lg:w-3/5`}
