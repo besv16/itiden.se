@@ -1,5 +1,11 @@
 module.exports = {
   theme: {
+    backgroundSize: {
+      auto: 'auto',
+      cover: 'cover',
+      contain: 'contain',
+      '100%': '100%',
+    },
     fontFamily: {
       body: ['Open Sans', 'sans-serif'],
     },
@@ -22,9 +28,10 @@ module.exports = {
       h4: ['16px', { letterSpacing: '0.01em', lineHeight: '137.5%' }],
     },
     screens: {
+      xs: '480px',
       sm: '640px',
       md: '768px',
-      lg: '1080px',
+      lg: '1128px',
       xl: '1280px',
     },
     extend: {
