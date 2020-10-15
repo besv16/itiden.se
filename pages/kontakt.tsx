@@ -1,4 +1,4 @@
-import { NextComponentType } from 'next';
+import { GetStaticProps, NextComponentType } from 'next';
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
@@ -9,6 +9,7 @@ import { Employee } from '../models/Employee';
 import { SocialmediaGroupLarge } from '../components/SocialMediaIcons/SocialmediaGroupLarge';
 import { ContactsGroup } from '../components/ContactIcons/ContactsGroup';
 import { Map } from '../components/Map/Map';
+import { getEmployeesFromJson } from '../data/employee';
 
 interface IndexPageProps {
   employees: Employee[];
@@ -56,8 +57,8 @@ const Divider = styled.div`
 `;
 
 const location = {
-  lat: 57.703480,
-  lng: 11.96750,
+  lat: 57.70348,
+  lng: 11.9675,
 };
 
 const zoomLevel = 15;
@@ -115,12 +116,15 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({
   );
 };
 
-IndexPage.getInitialProps = async () => {
-  const employees = await import('../data/data/employee.json').then(
-    m => m.default
-  );
+export const getStaticProps: GetStaticProps<Omit<
+  IndexPageProps,
+  'router'
+>> = async () => {
+  const employees = getEmployeesFromJson();
   return {
-    employees: employees.sort((a: Employee, b: Employee) => a.order - b.order),
+    props: {
+      employees: employees.sort((a, b) => a.order - b.order),
+    },
   };
 };
 

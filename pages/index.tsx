@@ -1,4 +1,4 @@
-import { NextComponentType } from 'next';
+import { GetStaticProps, NextComponentType } from 'next';
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
@@ -10,10 +10,10 @@ import { PongAnimation } from '../components/PongAnimation/PongAnimation';
 import { Content, HeaderWide, Page, Arrow, H1, H3 } from '../components/Layout';
 import { Tags } from '../components/Tag';
 import { Case, Page as PageModel } from '../models';
+import { getCasesFromJson } from '../data/case';
 
 interface IndexPageProps {
   cases: Case[];
-  page: PageModel | undefined;
 }
 
 const ContentWrapperGray = styled.div`
@@ -56,18 +56,18 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
       <HeaderWide role="main">
         <Content>
           <H1>
-            Vi kan kod. Vi kan också så mycket annat. Med över 20 års erfarenhet
-            av strategi, ux och teknik hjälper vi på Itiden dig nå rätt lösning.
+            Vi kan kod. Med lång erfarenhet av webb- &amp; apputveckling,
+            strategi, ux och teknik hjälper vi på Itiden dig med rätt lösning.
           </H1>
           <TagsWrapper>
             <Tags
               tags={[
                 'Digital byrå',
-                'Webb',
-                'App',
-                'Utveckling',
-                'Produktion',
-                'Centrala Göteborg',
+                'Webbutveckling',
+                'Apputveckling',
+                'UX',
+                'Design',
+                'Göteborg',
               ]}
             />
           </TagsWrapper>
@@ -117,9 +117,16 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
   );
 };
 
-IndexPage.getInitialProps = async () => {
-  const cases = await import('../data/data/case.json').then(m => m.default);
-  return { cases: cases.filter(c => c.showOnStartpage) };
+export const getStaticProps: GetStaticProps<Omit<
+  IndexPageProps,
+  'router'
+>> = async () => {
+  const cases = getCasesFromJson();
+  return {
+    props: {
+      cases: cases.filter(c => c.showOnStartpage),
+    },
+  };
 };
 
 export default IndexPage;

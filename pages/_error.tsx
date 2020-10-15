@@ -1,10 +1,11 @@
-import { NextComponentType } from 'next';
+import { GetStaticProps, NextComponentType } from 'next';
 import Head from 'next/head';
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { CaseGrid } from '../components/Case';
 import { Content, Header, Page } from '../components/Layout';
+import { getCasesFromJson } from '../data/case';
 import { Case } from '../models';
 
 interface ErrorPageProps {
@@ -38,9 +39,16 @@ const ErrorPage: NextComponentType<{}, {}, ErrorPageProps> = ({ cases }) => {
   );
 };
 
-ErrorPage.getInitialProps = async () => {
-  const cases = await import('../data/data/case.json').then(m => m.default);
-  return { cases };
+export const getStaticProps: GetStaticProps<Omit<
+  ErrorPageProps,
+  'router'
+>> = async () => {
+  const cases = getCasesFromJson();
+  return {
+    props: {
+      cases,
+    },
+  };
 };
 
 export default ErrorPage;

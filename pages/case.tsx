@@ -1,10 +1,11 @@
-import { NextComponentType } from 'next';
+import { GetStaticProps, NextComponentType } from 'next';
 import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { CaseGrid } from '../components/Case';
 import { IndexHeader } from '../components/IndexHeader';
 import { Header, Page, Content, H2, H3 } from '../components/Layout';
+import { getCasesFromJson } from '../data/case';
 import { Case } from '../models';
 
 interface IndexPageProps {
@@ -12,8 +13,8 @@ interface IndexPageProps {
 }
 
 const ContentWrapper = styled.div`
-  padding-top: ${(props: { paddingTop: string; }) => props.paddingTop};
-  padding-bottom: ${(props: { paddingBottom: string; }) => props.paddingBottom};
+  padding-top: ${(props: { paddingTop: string }) => props.paddingTop};
+  padding-bottom: ${(props: { paddingBottom: string }) => props.paddingBottom};
 `;
 
 const CaseGridWrapper = styled.div`
@@ -22,7 +23,7 @@ const CaseGridWrapper = styled.div`
 
 const Paragraph = styled.p`
   ${tw`text-lg text-gray-300 mt-1 sm:text-xl w-full md:w-3/4 lg:w-3/5`}
-  padding-bottom: ${(props: { paddingBottom: string; }) => props.paddingBottom};
+  padding-bottom: ${(props: { paddingBottom: string }) => props.paddingBottom};
 
   @media (max-width: 767px) {
     margin-bottom: 0;
@@ -39,7 +40,10 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
           <Content>
             <H2>Fin rubrik till case</H2>
             <Paragraph paddingBottom={'1.5rem'}>
-              Vi kan Ux, Html, Css, Javascript, React, React Native, Php, Laravel, Android, iOS, Mobil, Desktop, App, Webb, Next.js, CMS, TypeScript, Frontend, Backend, AR, VR, Drupal, Wordpress och mer därtill. Utmana oss gärna.
+              Vi kan Ux, Html, Css, Javascript, React, React Native, Php,
+              Laravel, Android, iOS, Mobil, Desktop, App, Webb, Next.js, CMS,
+              TypeScript, Frontend, Backend, AR, VR, Drupal, Wordpress och mer
+              därtill. Utmana oss gärna.
             </Paragraph>
           </Content>
         </ContentWrapper>
@@ -51,7 +55,10 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
         <Content>
           <H3>Itiden Lab</H3>
           <Paragraph>
-            Det händer ibland att vi bygger egna produkter eller tjänster. Det kan vara för att utmana oss, lära oss nya tekniker eller helt enkelt för att vi tycker produkten behövs. Denna utveckling samlar vi under vad vi kallar Itiden Lab.
+            Det händer ibland att vi bygger egna produkter eller tjänster. Det
+            kan vara för att utmana oss, lära oss nya tekniker eller helt enkelt
+            för att vi tycker produkten behövs. Denna utveckling samlar vi under
+            vad vi kallar Itiden Lab.
           </Paragraph>
         </Content>
       </ContentWrapper>
@@ -64,9 +71,16 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
   );
 };
 
-IndexPage.getInitialProps = async () => {
-  const cases = await import('../data/data/case.json').then(m => m.default);
-  return { cases };
+export const getStaticProps: GetStaticProps<Omit<
+  IndexPageProps,
+  'router'
+>> = async () => {
+  const cases = getCasesFromJson();
+  return {
+    props: {
+      cases,
+    },
+  };
 };
 
 export default IndexPage;
