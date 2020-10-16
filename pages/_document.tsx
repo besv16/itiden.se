@@ -46,7 +46,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="sv">
         <Head>
-          <meta name="theme-color" content="#C75000" />
+          <meta name="theme-color" content="#242424" />
           <meta name="referrer" content="no-referrer" />
           <link
             rel="shortcut icon"
