@@ -68,6 +68,18 @@ const Information = styled.div`
   }
 `;
 
+const ContentWrapper = styled.div<{
+  paddingTop: string;
+  paddingBottom: string;
+}>`
+  padding-top: ${props => props.paddingTop};
+  padding-bottom: ${props => props.paddingBottom};
+`;
+
+const CaseGridWrapper = styled.div`
+  ${tw`mt-16 md:mt-6`}
+`;
+
 const CasePage = ({ selectedCase, cases }: CasePageProps) => {
   if (!selectedCase) {
     return null;
@@ -175,6 +187,22 @@ const CasePage = ({ selectedCase, cases }: CasePageProps) => {
           Fler case
         </H3>
         <CaseGrid cases={cases.filter(c => !c.labs)} />
+      </Content>
+      <ContentWrapper paddingTop={'6rem'} paddingBottom={'0.5rem'} id="lab">
+        <Content>
+          <H3>Itiden Lab</H3>
+          <p>
+            Det händer ibland att vi bygger egna produkter eller tjänster. Det
+            kan vara för att utmana oss, lära oss nya tekniker eller helt enkelt
+            för att vi tycker produkten behövs. Denna utveckling samlar vi under
+            vad vi kallar Itiden Lab.
+          </p>
+        </Content>
+      </ContentWrapper>
+      <Content>
+        <CaseGridWrapper>
+          <CaseGrid cases={cases.filter(c => c.labs)} />
+        </CaseGridWrapper>
       </Content>
     </Page>
   );
