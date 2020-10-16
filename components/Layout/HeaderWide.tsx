@@ -1,9 +1,10 @@
+import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-export const HeaderWide = styled.div`
-  ${tw`flex flex-col justify-center h-screen md:pt-48 -mt-10`}
-  
+export const Wrapper = styled.div<{ height: string }>`
+  height: ${p => p.height};
+  ${tw`flex flex-col justify-end md:pt-48 -mt-10`}
 
   @media (max-width: 767px) {
     ${tw`justify-end`}
@@ -13,3 +14,17 @@ export const HeaderWide = styled.div`
     ${tw`w-full md:w-3/4 lg:w-3/5`}
   }
 `;
+
+export const HeaderWide: React.FC = ({ children }) => {
+  const [windowHeight, setWindowHeight] = React.useState<number>();
+  React.useEffect(() => {
+    setWindowHeight(window.innerHeight);
+  }, []);
+  return (
+    <Wrapper
+      height={windowHeight !== undefined ? `${windowHeight}px` : '100vh'}
+    >
+      {children}
+    </Wrapper>
+  );
+};
