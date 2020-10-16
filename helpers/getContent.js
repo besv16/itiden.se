@@ -6,12 +6,12 @@ require('dotenv').config();
 
 const SPACE = process.env.CONTENTFUL_SPACE;
 const TOKEN = process.env.CONTENTFUL_TOKEN;
-const PREVIEW_TOKEN = process.env.CONTENTFUL_PREVIEW_TOKEN;
+const PREVIEW = process.env.CONTENTFUL_PREVIEW;
 
 const client = createClient({
   space: SPACE,
-  accessToken: PREVIEW_TOKEN,
-  host: "preview.contentful.com"
+  accessToken: TOKEN,
+  host: PREVIEW === 'true' ? 'preview.contentful.com' : 'cdn.contentful.com',
 });
 
 const dataDir = path.join(__dirname, '..', 'data', 'data');
