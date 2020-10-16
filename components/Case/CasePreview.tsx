@@ -94,7 +94,7 @@ const LazyImage: React.FC<{
   return (
     <Image
       alt={media.title}
-      data-src={`${url}?q=100&w=1404`}
+      data-src={`${url}?q=80&w=1404`}
       className="lazyload"
     />
   );
