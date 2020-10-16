@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 import Link from 'next/link';
 import { Logo } from '../Logo';
-import { LogoFnutt } from '../LogoFnutt';
+// import { LogoFnutt } from '../LogoFnutt';
 import { NavLink } from '../Navigation/NavLink';
 // import { Search } from '../Search';
 // import { VisuallyHidden } from '../Helpers/VisuallyHidden';
@@ -18,7 +18,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const Content = styled.div<HeaderProps>`
-  ${tw`flex px-6 md:px-5 items-center justify-center flex-col md:flex-row md:justify-between md:items-baseline flex-wrap pt-6 sm:pt-5`};
+  ${tw`flex px-6 items-center justify-center flex-col md:(flex-row justify-between items-baseline px-5) flex-wrap pt-6 md:pt-5`};
   max-width: 1120px;
 
   @media (max-width: 479px) {
@@ -26,6 +26,7 @@ const Content = styled.div<HeaderProps>`
   }
 
   @media (max-width: 767px) {
+    ${tw`justify-start items-start`}
     height: ${(props: HeaderProps) => (props.noLogoFnutt ? '0px' : '80px')};
   }
 
@@ -52,13 +53,23 @@ const Menu = styled.nav`
 `;
 
 const HeaderLogo = styled(Logo)`
-  ${tw`hidden md:block md:mx-auto h-8 fill-current text-gray-200`};
+  ${tw`block md:mx-auto h-8 fill-current text-gray-200`};
+
+  @media (max-width: 479px) {
+    ${tw`mt-6`}
+  }
+
+  @media (max-width: 767px) {
+    width: 90px;
+    height: 27.5px;
+  }
+
 `;
 
-const HeaderLogoFnutt = styled(LogoFnutt)`
-  ${tw`block md:hidden h-20 absolute top-0`};
-  left: 24px;
-`;
+// const HeaderLogoFnutt = styled(LogoFnutt)`
+//   ${tw`block md:hidden h-20 absolute top-0`};
+//   left: 24px;
+// `;
 
 export const Header: React.FC<HeaderProps> = props => {
   // const [showSearch, setShowSearch] = React.useState(false);
@@ -77,7 +88,7 @@ export const Header: React.FC<HeaderProps> = props => {
         <Link href="/">
           <a aria-label="itiden.se">
             <HeaderLogo />
-            {!props.noLogoFnutt && <HeaderLogoFnutt />}
+            {/* {!props.noLogoFnutt && <HeaderLogoFnutt />} */}
           </a>
         </Link>
         <Menu>
