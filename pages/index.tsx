@@ -53,7 +53,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
   return (
     <Page>
       <IndexHeader />
-      <HeaderWide role="main">
+      <HeaderWide>
         <Content>
           <H1>
             Vi kan kod. Med lång erfarenhet av webb- &amp; apputveckling,

@@ -22,6 +22,7 @@ export const HeaderWide: React.FC = ({ children }) => {
   }, []);
   return (
     <Wrapper
+      role="main"
       height={windowHeight !== undefined ? `${windowHeight}px` : '100vh'}
     >
       {children}
