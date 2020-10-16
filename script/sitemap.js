@@ -1,21 +1,34 @@
 /* eslint @typescript-eslint/no-var-requires: 0 */
 const fs = require('fs');
-const sm = require('sitemap');
-const { exportPathMap } = require('../next.config');
+const path = require('path');
+const { SitemapStream } = require('sitemap');
+
+function getCasesFromJson() {
+  const casesJsonPath = path.join(process.cwd(), 'data', 'data', 'case.json');
+  return JSON.parse(fs.readFileSync(casesJsonPath, 'utf8'));
+}
 
 async function generateSitemap() {
-  const pages = await exportPathMap();
-  const urls = Object.entries(pages).map(([url]) => ({
-    url,
-  }));
+  const links = [
+    { url: '/', priority: 0.8 },
+    { url: '/case/', priority: 0.6 },
+    { url: '/om/', priority: 0.8 },
+    { url: '/kontakt/', priority: 0.8 },
+  ];
 
-  const sitemap = sm.createSitemap({
-    hostname: 'https://www.itiden.se',
-    cacheTime: 60000,
-    urls: urls,
+  const cases = getCasesFromJson();
+  cases.forEach(c => {
+    links.push({ url: `/case/${c.slug}/`, priority: 0.5 });
   });
 
-  fs.writeFileSync('./out/sitemap.xml', sitemap.toString());
+  const sitemap = new SitemapStream({ hostname: 'https://www.itiden.se' });
+  const writeStream = fs.createWriteStream('./out/sitemap.xml');
+  sitemap.pipe(writeStream);
+
+  links.forEach(link => {
+    sitemap.write(link);
+  });
+  sitemap.end();
 }
 
 generateSitemap();
