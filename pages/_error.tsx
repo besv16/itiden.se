@@ -21,7 +21,7 @@ const ContentWrapper = styled.div<{
 `;
 
 const CaseGridWrapper = styled.div`
-  ${tw`mt-16 md:mt-4`}
+  ${tw`mt-16 md:mt-6`}
 `;
 
 const Paragraph = styled.p<{ paddingBottom?: string }>`
