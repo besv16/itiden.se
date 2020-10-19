@@ -289,11 +289,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             vi därför med en del egna experiment eller produkter, ibland som
             fortbildning och ibland bara för att det är kul. Detta kallar vi{' '}
             <Link href={`/case/#lab`} passHref>
-              <A>Itiden Lab</A>
-            </Link>{' '}
-            och kan utforskas mer{' '}
-            <Link href={`/case/#lab`} passHref>
-              <A>här</A>
+              <A>Itiden Lab och kan utforskas mer här</A>
             </Link>
             . Vi har genom åren också märkt att en trivsam miljö ofta leder till
             bättre resultat varför vi även har en liten musikstudio med olika
@@ -363,11 +359,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             vi därför med en del egna experiment eller produkter, ibland som
             fortbildning och ibland bara för att det är kul. Detta kallar vi{' '}
             <Link href={`/case/#lab`} passHref>
-              <A>Itiden Lab</A>
-            </Link>{' '}
-            och kan utforskas mer{' '}
-            <Link href={`/case/#lab`} passHref>
-              <A>här</A>
+              <A>Itiden Lab och kan utforskas mer här</A>
             </Link>
             . Vi har genom åren också märkt att en trivsam miljö ofta leder till
             bättre resultat varför vi även har en liten musikstudio med olika
