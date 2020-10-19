@@ -254,19 +254,19 @@ const IndexPage: NextComponentType<{}, {}> = () => {
       <TechWrapper>
         <Content>
           <TechLarge>
-            <img src="/static/ikoner-svg-lg.png" alt="Pil" />
+            <img src="/static/ikoner-svg-lg.png" alt="Tekniker" />
           </TechLarge>
           <TechMedium>
-            <img src="/static/ikoner-svg-md.png" alt="Pil" />
+            <img src="/static/ikoner-svg-md.png" alt="Tekniker" />
           </TechMedium>
           <TechSmall>
-            <img src="/static/ikoner-svg-sm.png" alt="Pil" />
+            <img src="/static/ikoner-svg-sm.png" alt="Tekniker" />
           </TechSmall>
         </Content>
       </TechWrapper>
       <ItidenWrapperMobile>
         <ImageWrapperMobile>
-          <img src="/static/soffa-mobil.jpg"></img>
+          <img src="/static/soffa-mobil.jpg" alt="Itidens kontor"></img>
         </ImageWrapperMobile>
         <Content>
           <H3
@@ -337,7 +337,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
       <ItidenWrapperDesktop>
         <Content>
           <ImageWrapperDesktop>
-            <img src="/static/soffa-desktop.jpg"></img>
+            <img src="/static/soffa-desktop.jpg" alt="Itidens kontor"></img>
           </ImageWrapperDesktop>
           <H3
             css={`
