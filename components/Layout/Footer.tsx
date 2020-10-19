@@ -67,7 +67,7 @@ export const Footer = () => (
     <Container>
       <RowWrapper>
         <ItidenContainer>
-          <a href="/">
+          <a aria-label="Itiden hem" href="/">
             <FooterLogo />
           </a>
         </ItidenContainer>
