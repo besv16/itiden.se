@@ -133,22 +133,18 @@ const CasePage = ({ selectedCase, cases }: CasePageProps) => {
               </p>
             )}
             {partners.length > 0 && (
-              <p>
+              <p
+                css={`
+                  ${tw`mb-6`}
+                `}
+              >
                 Partners: {partners.map(partner => partner.name).join(', ')}
               </p>
             )}
-            <div
-              css={`
-                ${tw`mt-8`}
-              `}
-            >
+            <div>
               <Tags tags={technologies} />
             </div>
-            <div
-              css={`
-                ${tw`mt-2`}
-              `}
-            >
+            <div>
               <Tags tags={categories} />
             </div>
           </Information>
