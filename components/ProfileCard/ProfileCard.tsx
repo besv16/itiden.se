@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 
 const Wrapper = styled.div`
-  ${tw`w-full md:w-1/2 lg:w-1/3 mt-8 flex`}
+  ${tw`w-full md:w-1/2 lg:w-1/3 mb-8 md:mb-20 flex`}
 `;
 
 const Avatar = styled.img`

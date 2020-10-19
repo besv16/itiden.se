@@ -3,7 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 import { IndexHeader } from '../components/IndexHeader';
-import { Page, Hero } from '../components/Layout';
+import { Page, Hero, H3 } from '../components/Layout';
 import { ProfileCard } from '../components/ProfileCard';
 import { Employee } from '../models/Employee';
 import { SocialmediaGroupLarge } from '../components/SocialMediaIcons/SocialmediaGroupLarge';
@@ -16,7 +16,7 @@ interface IndexPageProps {
 }
 
 const EmployeesWrapper = styled.div`
-  ${tw`flex flex flex-wrap`};
+  ${tw`flex flex flex-wrap mt-10`};
 `;
 const TopContentWrapper = styled.div`
   ${tw`flex -mt-20 md:(min-h-screen mt-0) items-center max-w-screen-lg mx-auto`}
@@ -37,7 +37,7 @@ const GreenBanner = styled(Hero)`
   ${tw`py-10 bg-green text-center mb-24`};
 `;
 const WhiteBanner = styled(Hero)`
-  ${tw`hidden py-10 bg-white text-center mt-32 md:block`};
+  ${tw`hidden py-10 bg-white text-center mt-12 md:block`};
 `;
 const ContactLink = styled.a`
   ${tw`text-gray-700 text-xl font-semibold cursor-pointer hover:text-purple-700`}
@@ -53,7 +53,7 @@ const Filler = styled.div`
   height: 35vh;
 `;
 const Divider = styled.div`
-  ${tw`w-full h-px bg-gray-500 mt-8 last:hidden md:hidden`};
+  ${tw`w-full h-px bg-gray-500 mb-8 last:hidden md:hidden`};
 `;
 
 const location = {
@@ -89,7 +89,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({
         </Adresswide>
       </GreenBanner>
       <ContentWrapper>
-        <h2>Medarbetare</h2>
+        <H3>Medarbetare</H3>
         <EmployeesWrapper>
           {employees.map(employee => (
             <React.Fragment key={employee.id}>
