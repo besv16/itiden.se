@@ -39,9 +39,10 @@ const ContactBoxWrapper = styled.div`
   ${tw`flex flex-col items-start`};
   @media (min-width: 768px) {
     min-width: 463px;
+    max-width: 713px;
     flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: baseline;
   }
 `;
 
@@ -51,7 +52,7 @@ const ContactBox = styled.div`
 `;
 
 const ContactLink = styled.a`
-  ${tw`flex items-center md:flex-col text-lg md:text-h3 md:font-bold md:underline text-gray-300 hover:text-teal-400`}
+  ${tw`flex items-center md:flex-col text-lg md:text-h3 md:font-bold md:underline text-gray-200 hover:text-teal-400`}
 `;
 
 const ContactInfo = styled.span`
