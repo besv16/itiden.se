@@ -42,7 +42,7 @@ const ParagraphCentered = styled.p`
 `;
 
 const TagsWrapper = styled.div`
-  ${tw`w-full my-10 hidden sm:block`};
+  ${tw`w-full mt-1 mb-12 hidden sm:block`};
 `;
 
 const CaseWrapper = styled.div`
