@@ -28,6 +28,15 @@ const FindIcon = styled(Find)`
 const MailLiteIcon = styled(MailLite)`
   ${tw`stroke-current md:hidden text-gray-200 hover:text-teal-400`};
 `;
+const IconWrapper = styled.div`
+  ${tw`flex items-center`}
+  height: 54px;
+`;
+const LiteIconWrapper = styled.div`
+  ${tw`flex justify-center`}
+  width: 44px;
+`;
+
 const PhoneLiteIcon = styled(PhoneLite)`
   ${tw`stroke-current md:hidden text-gray-200 hover:text-teal-400`};
 `;
@@ -42,7 +51,7 @@ const ContactBoxWrapper = styled.div`
     max-width: 713px;
     flex-direction: row;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-start;
   }
 `;
 
@@ -66,9 +75,13 @@ export const ContactsGroup: React.FC<ContactsGroupProps> = props => {
         <>
           <ContactBox>
             <ContactLink href="mailto:hej@itiden.se">
-                  <MailIcon />
-                  <MailLiteIcon />
-                  <ContactInfo>hej@itiden.se</ContactInfo>
+              <IconWrapper>
+                <MailIcon />
+              </IconWrapper>
+              <LiteIconWrapper>
+                <MailLiteIcon />
+              </LiteIconWrapper>
+              <ContactInfo>hej@itiden.se</ContactInfo>
             </ContactLink>
           </ContactBox>
         </>
@@ -77,8 +90,12 @@ export const ContactsGroup: React.FC<ContactsGroupProps> = props => {
         <>
           <ContactBox>
               <ContactLink href="https://goo.gl/maps/Dqa7A3jFhuyatxjC8">
-                <FindIcon />
-                <FindLiteIcon />
+                <IconWrapper>
+                  <FindIcon />
+                </IconWrapper>
+                <LiteIconWrapper>
+                  <FindLiteIcon />
+                </LiteIconWrapper>
                 <ContactInfo>
                   Kungstorget 11-12
                   <br />
@@ -92,8 +109,12 @@ export const ContactsGroup: React.FC<ContactsGroupProps> = props => {
         <>
           <ContactBox>
             <ContactLink href="tel:0709-597008">
-              <PhoneIcon />
-              <PhoneLiteIcon />
+              <IconWrapper>
+                <PhoneIcon />
+              </IconWrapper>
+              <LiteIconWrapper>
+                <PhoneLiteIcon />
+              </LiteIconWrapper>
               <ContactInfo>0709-597008</ContactInfo>
             </ContactLink>
           </ContactBox>
