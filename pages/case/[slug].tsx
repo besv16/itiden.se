@@ -76,8 +76,12 @@ const ContentWrapper = styled.div<{
   padding-bottom: ${props => props.paddingBottom};
 `;
 
-const CaseGridWrapper = styled.div`
+const CaseGridLabWrapper = styled.div`
   ${tw`mt-16 md:mt-6`}
+
+  & div {
+    margin-bottom: 0;
+  }
 `;
 
 const CasePage = ({ selectedCase, cases }: CasePageProps) => {
@@ -196,9 +200,9 @@ const CasePage = ({ selectedCase, cases }: CasePageProps) => {
         </Content>
       </ContentWrapper>
       <Content>
-        <CaseGridWrapper>
+        <CaseGridLabWrapper>
           <CaseGrid cases={cases.filter(c => c.labs)} />
-        </CaseGridWrapper>
+        </CaseGridLabWrapper>
       </Content>
     </Page>
   );
