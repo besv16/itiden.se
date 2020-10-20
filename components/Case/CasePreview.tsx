@@ -35,7 +35,7 @@ const Image = styled.img`
 const CaseWrapper = styled.div`
   ${tw`mb-16`}
   @media (min-width: 768px) {
-    width: calc(50% - 0.5rem);
+    width: calc(50% - 0.6rem);
   }
 `;
 
