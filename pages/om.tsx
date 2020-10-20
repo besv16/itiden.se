@@ -132,7 +132,7 @@ const ImageWrapper = styled.div`
   ${tw`w-full mb-20 md:mb-0`}
 
   @media (min-width: 768px) {
-    width: 32%;
+    width: 32.13%;
   }
 
   & img {
