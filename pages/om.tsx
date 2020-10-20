@@ -97,7 +97,7 @@ const TechSmall = styled.div`
 `;
 
 const ItidenWrapperDesktop = styled.div`
-  ${tw`hidden md:block my-32`}
+  ${tw`hidden md:block mt-20 mb-24`}
 `;
 
 const ItidenWrapperMobile = styled.div`
@@ -117,10 +117,35 @@ const ImageWrapperMobile = styled.div`
 `;
 
 const ImageWrapperDesktop = styled.div`
-  ${tw`hidden md:block`}
+  ${tw`hidden md:block md:mt-20`}
 
   & img {
     ${tw`w-full`}
+  }
+`;
+
+const ItidenImagesWrapper = styled.div`
+  ${tw`flex flex-col mt-20 mb-4 md:(flex-row justify-between mt-24 mb-32)`}
+`;
+
+const ImageWrapper = styled.div`
+  ${tw`w-full mb-20 md:mb-0`}
+
+  @media (min-width: 768px) {
+    width: 32%;
+  }
+
+  & img {
+    ${tw`w-full`}
+  }
+`;
+
+const Caption = styled.div`
+  ${tw`bg-gray-600 flex items-center py-4 px-5`}
+  min-height: 76px;
+  
+  & p {
+    ${tw`m-0 text-image font-semibold`}
   }
 `;
 
@@ -151,7 +176,39 @@ const IndexPage: NextComponentType<{}, {}> = () => {
         <AboutIconsGroup />
       </GrayBanner>
       <KeywordsWrapperMobile>
+        
+        <ImageWrapperMobile>
+          <img src="/static/soffa-mobil.jpg" alt="Itidens kontor"></img>
+        </ImageWrapperMobile>
         <Content>
+          <H3
+            css={`
+              ${tw`mt-20 sm:(mt-24)`}
+            `}
+          >
+            Varför
+          </H3>
+          <WideParagraph>
+            Itiden startades för över 20 år sedan av nyfikna teknikentusiaster
+            som brann för allt som har med webbutveckling och digitala tekniker
+            att göra. Detta är än idag kärnan i vår verksamhet. Vi håller oss
+            uppdaterade inom de senaste metoderna i en ständigt förändrande
+            landskap och har som mål att alltid ligga i framkant samt ha god
+            kännedom om rådande tekniska möjligheter.
+          </WideParagraph>
+          <WideParagraph>
+            Vi värdesätter personlig utveckling och förutom kundprojekt arbetar
+            vi därför med en del egna experiment eller produkter, ibland som
+            fortbildning och ibland bara för att det är kul. Detta kallar vi{' '}
+            <Link href={`/case/#lab`} passHref>
+              <A>Itiden Lab och kan utforskas mer här</A>
+            </Link>
+            . Vi har genom åren också märkt att en trivsam miljö ofta leder till
+            bättre resultat varför vi även har en liten musikstudio med olika
+            instrument, tillgång till pingisbord samt kör löpande
+            miniturneringar i tv-spel.
+          </WideParagraph>
+          
           <H3>Itiden förenklat</H3>
           <Keywords>
             <KeywordsGroup>
@@ -208,6 +265,38 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             detta vis kan vi ta snabba beslut om förutsättningar för projektet
             förändras och vi kan tillsammans nå önskat resultat.
           </QuarteredParagraph>
+
+          <ImageWrapperDesktop>
+            <img src="/static/soffa-desktop.jpg" alt="Itidens kontor"></img>
+          </ImageWrapperDesktop>
+          <H3
+            css={`
+              ${tw`mt-16`}
+            `}
+          >
+            Varför
+          </H3>
+          <QuarteredParagraph>
+            Itiden startades för över 20 år sedan av nyfikna teknikentusiaster
+            som brann för allt som har med webbutveckling och digitala tekniker
+            att göra. Detta är än idag kärnan i vår verksamhet. Vi håller oss
+            uppdaterade inom de senaste metoderna i en ständigt förändrande
+            landskap och har som mål att alltid ligga i framkant samt ha god
+            kännedom om rådande tekniska möjligheter.
+          </QuarteredParagraph>
+          <QuarteredParagraph>
+            Vi värdesätter personlig utveckling och förutom kundprojekt arbetar
+            vi därför med en del egna experiment eller produkter, ibland som
+            fortbildning och ibland bara för att det är kul. Detta kallar vi{' '}
+            <Link href={`/case/#lab`} passHref>
+              <A>Itiden Lab och kan utforskas mer här</A>
+            </Link>
+            . Vi har genom åren också märkt att en trivsam miljö ofta leder till
+            bättre resultat varför vi även har en liten musikstudio med olika
+            instrument, tillgång till pingisbord samt kör löpande
+            miniturneringar i tv-spel.
+          </QuarteredParagraph>
+
           <KeywordsWrapperDesktop>
             <H3>Itiden förenklat</H3>
             <Keywords>
@@ -265,37 +354,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
         </Content>
       </TechWrapper>
       <ItidenWrapperMobile>
-        <ImageWrapperMobile>
-          <img src="/static/soffa-mobil.jpg" alt="Itidens kontor"></img>
-        </ImageWrapperMobile>
         <Content>
-          <H3
-            css={`
-              ${tw`mt-20 sm:(mt-24)`}
-            `}
-          >
-            Varför gör vi det vi gör
-          </H3>
-          <WideParagraph>
-            Itiden startades för över 20 år sedan av nyfikna teknikentusiaster
-            som brann för allt som har med webbutveckling och digitala tekniker
-            att göra. Detta är än idag kärnan i vår verksamhet. Vi håller oss
-            uppdaterade inom de senaste metoderna i en ständigt förändrande
-            landskap och har som mål att alltid ligga i framkant samt ha god
-            kännedom om rådande tekniska möjligheter.
-          </WideParagraph>
-          <WideParagraph>
-            Vi värdesätter personlig utveckling och förutom kundprojekt arbetar
-            vi därför med en del egna experiment eller produkter, ibland som
-            fortbildning och ibland bara för att det är kul. Detta kallar vi{' '}
-            <Link href={`/case/#lab`} passHref>
-              <A>Itiden Lab och kan utforskas mer här</A>
-            </Link>
-            . Vi har genom åren också märkt att en trivsam miljö ofta leder till
-            bättre resultat varför vi även har en liten musikstudio med olika
-            instrument, tillgång till pingisbord samt kör löpande
-            miniturneringar i tv-spel.
-          </WideParagraph>
           <H3
             css={`
               ${tw`mt-10`}
@@ -336,36 +395,6 @@ const IndexPage: NextComponentType<{}, {}> = () => {
 
       <ItidenWrapperDesktop>
         <Content>
-          <ImageWrapperDesktop>
-            <img src="/static/soffa-desktop.jpg" alt="Itidens kontor"></img>
-          </ImageWrapperDesktop>
-          <H3
-            css={`
-              ${tw`mt-24`}
-            `}
-          >
-            Varför gör vi det vi gör
-          </H3>
-          <QuarteredParagraph>
-            Itiden startades för över 20 år sedan av nyfikna teknikentusiaster
-            som brann för allt som har med webbutveckling och digitala tekniker
-            att göra. Detta är än idag kärnan i vår verksamhet. Vi håller oss
-            uppdaterade inom de senaste metoderna i en ständigt förändrande
-            landskap och har som mål att alltid ligga i framkant samt ha god
-            kännedom om rådande tekniska möjligheter.
-          </QuarteredParagraph>
-          <QuarteredParagraph>
-            Vi värdesätter personlig utveckling och förutom kundprojekt arbetar
-            vi därför med en del egna experiment eller produkter, ibland som
-            fortbildning och ibland bara för att det är kul. Detta kallar vi{' '}
-            <Link href={`/case/#lab`} passHref>
-              <A>Itiden Lab och kan utforskas mer här</A>
-            </Link>
-            . Vi har genom åren också märkt att en trivsam miljö ofta leder till
-            bättre resultat varför vi även har en liten musikstudio med olika
-            instrument, tillgång till pingisbord samt kör löpande
-            miniturneringar i tv-spel.
-          </QuarteredParagraph>
           <H3
             css={`
               ${tw`mt-10`}
@@ -403,7 +432,16 @@ const IndexPage: NextComponentType<{}, {}> = () => {
           </QuarteredParagraph>
         </Content>
       </ItidenWrapperDesktop>
-
+      <Content>
+        <ItidenImagesWrapper>
+          <ImageWrapper>
+            <img src="/static/studio.jpg" alt="Itidens studio"></img>
+            <Caption>
+              <p>Vi har en liten musikstudio med sköna jammingsmöjligheter</p>
+            </Caption>
+          </ImageWrapper>
+        </ItidenImagesWrapper>
+      </Content>
       <Contact blue />
     </Page>
   );
