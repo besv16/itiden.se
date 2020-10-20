@@ -26,6 +26,7 @@ module.exports = {
       // h3-links: Samma som h3 + underline + font-bold
       'h3-links-light-bg': ['24px', { lineHeight: '137.5%' }], // + underline + font-bold
       h4: ['16px', { letterSpacing: '0.01em', lineHeight: '137.5%' }],
+      image: ['16px', { lineHeight: '137.5%' }],
     },
     screens: {
       xs: '480px',
