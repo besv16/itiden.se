@@ -446,6 +446,18 @@ const IndexPage: NextComponentType<{}, {}> = () => {
               <p>Vi har en liten musikstudio med sköna jammingsmöjligheter</p>
             </Caption>
           </ImageWrapper>
+          <ImageWrapper>
+            <img src="/static/studio.jpg" alt="Itidens studio"></img>
+            <Caption>
+              <p>Vi har en liten musikstudio med sköna jammingsmöjligheter</p>
+            </Caption>
+          </ImageWrapper>
+          <ImageWrapper>
+            <img src="/static/studio.jpg" alt="Itidens studio"></img>
+            <Caption>
+              <p>Vi har en liten musikstudio med sköna jammingsmöjligheter</p>
+            </Caption>
+          </ImageWrapper>
         </ItidenImagesWrapper>
       </Content>
       <Contact blue />
