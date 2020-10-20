@@ -47,7 +47,7 @@ const ContactInfo = styled.h3`
 `;
 
 const ContactContainer = styled.div`
-  ${tw`md:(w-1/2 flex justify-end self-end space-x-6)`};
+  ${tw`md:(w-1/2 flex justify-end self-end space-x-5)`};
 `;
 
 const Divider = styled.div`
