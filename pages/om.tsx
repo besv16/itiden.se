@@ -125,11 +125,11 @@ const ImageWrapperDesktop = styled.div`
 `;
 
 const ItidenImagesWrapper = styled.div`
-  ${tw`flex flex-col mt-20 mb-4 md:(flex-row justify-between mt-24 mb-32)`}
+  ${tw`flex flex-col mt-20 sm:(mb-32) md:(flex-row justify-between mt-24)`}
 `;
 
 const ImageWrapper = styled.div`
-  ${tw`w-full mb-20 md:mb-0`}
+  ${tw`w-full mb-20 last:mb-0 md:mb-0`}
 
   @media (min-width: 768px) {
     width: 32.13%;
