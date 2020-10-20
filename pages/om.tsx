@@ -38,7 +38,7 @@ const WideParagraph = styled(Paragraph)<{ primary?: boolean }>`
 `;
 
 const KeywordsWrapperDesktop = styled.div`
-  ${tw`hidden md:block mt-16 mb-20`}
+  ${tw`hidden md:block mt-10 mb-24`}
 `;
 
 const KeywordsWrapperMobile = styled.div`
@@ -209,7 +209,13 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             miniturneringar i tv-spel.
           </WideParagraph>
           
-          <H3>Itiden förenklat</H3>
+          <H3
+            css={`
+              ${tw`mt-10`}
+            `}
+          >
+          Itiden förenklat
+          </H3>
           <Keywords>
             <KeywordsGroup>
               <Keyword>Utveckling</Keyword>
