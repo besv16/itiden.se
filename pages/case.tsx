@@ -49,7 +49,12 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
   return (
     <Page>
       <IndexHeader title="Case" />
-      <Header role="banner">
+      <Header 
+        role="banner"
+        css={
+          tw`md:(pb-2)`
+        }
+      >
         <ContentWrapper paddingTop={'16rem'} paddingBottom={'0.5rem'} responsivePaddingTop>
           <Content>
             <H2>Fin rubrik till case</H2>
@@ -68,7 +73,11 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
       <ContentWrapper paddingTop={'6rem'} paddingBottom={'0.5rem'} id="lab">
         <Content>
           <H3>Itiden Lab</H3>
-          <Paragraph>
+          <Paragraph
+            css={
+              tw`md:(mb-0)`
+            }
+          >
             Det händer ibland att vi bygger egna produkter eller tjänster. Det
             kan vara för att utmana oss, lära oss nya tekniker eller helt enkelt
             för att vi tycker produkten behövs. Denna utveckling samlar vi under
