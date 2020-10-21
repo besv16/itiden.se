@@ -80,7 +80,11 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
       <PongAnimation />
       <ContentWrapperGray>
         <Content>
-          <ContentCentered>
+          <ContentCentered
+            css={tw`
+              text-left md:text-center
+            `}
+          >
             <H3>Teknisk kreativitet</H3>
             <Paragraph>
               Kärnan i vår verksamhet kommer från vårt stora intresse för teknik
