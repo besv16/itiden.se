@@ -84,7 +84,7 @@ export const CasePreview: React.FC<CasePreviewProps> = ({
           <Tag
             key={tech}
             css={`
-              ${tw`mr-4 whitespace-no-wrap text-gray-100`}
+              ${tw`mr-4 whitespace-no-wrap`}
             `}
           >
             {tech}

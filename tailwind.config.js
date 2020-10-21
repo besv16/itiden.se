@@ -27,6 +27,8 @@ module.exports = {
       'h3-links-light-bg': ['24px', { lineHeight: '137.5%' }], // + underline + font-bold
       h4: ['16px', { letterSpacing: '0.01em', lineHeight: '137.5%' }],
       image: ['16px', { lineHeight: '137.5%' }],
+      button: ['16px', { lineHeight: '200%' }],
+      buttonDesktop: ['20px', { lineHeight: '162.5%' }],
     },
     screens: {
       xs: '480px',

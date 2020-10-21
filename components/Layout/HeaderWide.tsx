@@ -4,7 +4,7 @@ import tw from 'twin.macro';
 
 export const Wrapper = styled.div<{ height: string }>`
   height: ${p => p.height};
-  ${tw`flex flex-col justify-end md:pt-48 -mt-10`}
+  ${tw`flex flex-col justify-end sm:pt-48 -mt-10`}
 
   @media (max-width: 767px) {
     ${tw`justify-end`}
