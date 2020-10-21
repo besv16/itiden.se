@@ -108,7 +108,11 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
       </ContentWrapperPurple>
       <CaseWrapper>
         <Content>
-          <H3>Case</H3>
+          <H3
+            css={tw`mb-10`}
+          >
+            Case
+          </H3>
           <CaseGrid cases={cases} />
           <ParagraphCentered>
             <Link href="/case" passHref>
