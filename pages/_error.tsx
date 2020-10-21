@@ -15,9 +15,15 @@ interface ErrorPageProps {
 const ContentWrapper = styled.div<{
   paddingTop: string;
   paddingBottom: string;
+  responsivePaddingTop?: boolean;
 }>`
   padding-top: ${props => props.paddingTop};
   padding-bottom: ${props => props.paddingBottom};
+
+  @media (max-width: 767px) {
+    ${props =>
+      props.responsivePaddingTop != null && `padding-top: 12.5rem`};
+  }
 `;
 
 const CaseGridWrapper = styled.div`
@@ -40,7 +46,7 @@ const ErrorPage: NextComponentType<{}, {}, ErrorPageProps> = ({ cases }) => {
     <Page>
       <IndexHeader />
       <Header role="banner">
-        <ContentWrapper paddingTop={'16rem'} paddingBottom={'0.5rem'}>
+        <ContentWrapper paddingTop={'16rem'} paddingBottom={'0.5rem'} responsivePaddingTop>
           <Content>
             <H2>404</H2>
             <Paragraph paddingBottom={'1.5rem'}>

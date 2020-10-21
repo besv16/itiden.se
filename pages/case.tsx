@@ -15,9 +15,15 @@ interface IndexPageProps {
 const ContentWrapper = styled.div<{
   paddingTop: string;
   paddingBottom: string;
+  responsivePaddingTop?: boolean;
 }>`
   padding-top: ${props => props.paddingTop};
   padding-bottom: ${props => props.paddingBottom};
+
+  @media (max-width: 767px) {
+    ${props =>
+      props.responsivePaddingTop != null && `padding-top: 12.5rem`};
+  }
 `;
 
 const CaseGridLabWrapper = styled.div`
@@ -44,7 +50,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
     <Page>
       <IndexHeader title="Case" />
       <Header role="banner">
-        <ContentWrapper paddingTop={'16rem'} paddingBottom={'0.5rem'}>
+        <ContentWrapper paddingTop={'16rem'} paddingBottom={'0.5rem'} responsivePaddingTop>
           <Content>
             <H2>Fin rubrik till case</H2>
             <Paragraph paddingBottom={'1.5rem'}>

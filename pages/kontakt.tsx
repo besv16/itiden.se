@@ -19,7 +19,7 @@ const EmployeesWrapper = styled.div`
   ${tw`flex flex flex-wrap mt-10`};
 `;
 const TopContentWrapper = styled.div`
-  ${tw`flex -mt-20 md:(min-h-screen mt-0) items-center max-w-screen-lg mx-auto`}
+  ${tw`flex md:(min-h-screen mt-0) items-center max-w-screen-lg mx-auto`}
   @media (min-width: 768px) {
     margin-bottom: -104px;
   }
@@ -28,7 +28,7 @@ const ContentWrapper = styled.div`
   ${tw`mx-6 md:mx-5 lg:mx-auto max-w-screen-lg`}
 `;
 const QuarteredContent = styled.div`
-  ${tw`flex flex-col mx-6 md:(mx-5 w-3/4) lg:(mx-0)`}
+  ${tw`flex flex-col mx-6 pt-56 md:(mx-5 w-3/4 pt-0) lg:(mx-0)`}
 `;
 const GrayBanner = styled(Hero)`
   ${tw`mt-16 py-10 bg-gray-600`}
@@ -48,10 +48,6 @@ const AdressNarrow = styled.a`
 const Adresswide = styled.a`
   ${tw`hidden md:inline text-gray-600 text-xl font-semibold cursor-pointer hover:text-purple-700`}
 `;
-const Filler = styled.div`
-  ${tw`md:hidden`}
-  height: 35vh;
-`;
 const Divider = styled.div`
   ${tw`w-full h-px bg-gray-500 mb-8 last:hidden md:hidden`};
 `;
@@ -69,7 +65,6 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({
   return (
     <Page>
       <IndexHeader title="Kontakt" />
-      <Filler />
       <TopContentWrapper>
         <QuarteredContent>
           <h1>Vi ser fram emot att höra från dig.</h1>

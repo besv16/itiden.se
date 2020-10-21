@@ -16,7 +16,11 @@ import {
 } from '../components/Layout';
 
 const ContentWrapperMobile = styled.div`
-  ${tw`md:hidden pt-24`};
+  ${tw`md:hidden`};
+
+  @media (max-width: 767px) {
+    padding-top: 12.5rem;
+  }
 `;
 const ContentWrapperDesktop = styled.div`
   ${tw`hidden md:block mt-20 pt-3`};
