@@ -17,7 +17,7 @@ interface IndexPageProps {
 }
 
 const ContentWrapperGray = styled.div`
-  ${tw`bg-gray-600 pt-24 pb-16 md:py-24`}
+  ${tw`bg-gray-600 py-16 md:py-24`}
 `;
 
 const ContentWrapperPurple = styled.div`
@@ -33,7 +33,7 @@ const ContentCentered = styled.div`
 `;
 
 const Paragraph = styled.p`
-  ${tw`text-lg text-gray-300 mt-6 sm:text-2xl`}
+  ${tw`text-lg text-gray-300 mt-1 sm:text-2xl`}
 `;
 
 const ParagraphCentered = styled.p`
