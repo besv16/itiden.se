@@ -129,7 +129,13 @@ const CasePage = ({ selectedCase, cases }: CasePageProps) => {
         </MediaWrapper>
         <Content role="main">
           <Information>
-            <H2>{title}</H2>
+            <H2
+              css={`
+                ${tw`mb-3`}
+              `}
+            >
+              {title}
+            </H2>
             {documentToReactComponents(description)}
             {url && (
               <p>
