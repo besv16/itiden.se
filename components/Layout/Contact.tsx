@@ -30,7 +30,11 @@ return (
   <ContactWrapper>
       { props.purple &&
         <>
-          <PurpleBanner>
+          <PurpleBanner
+            css={`
+              ${tw`mt-32`}
+            `}
+          >
             <Content>
               <p
                 css={`
