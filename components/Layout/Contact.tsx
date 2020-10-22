@@ -6,15 +6,15 @@ import { ContactsGroup } from '../../components/ContactIcons/ContactsGroup';
 
 interface ContactProps {
   blue?: boolean;
-  green?: boolean;
+  purple?: boolean;
 }
 
 const ContactWrapper = styled.div`
   ${tw`hidden sm:block`}
 `;
 
-const GreenBanner = styled(Hero)`
-  ${tw`py-10 bg-green text-center`};
+const PurpleBanner = styled(Hero)`
+  ${tw`py-10 bg-purple-700 text-center`};
 `;
 
 const BlueBanner = styled(Hero)`
@@ -22,19 +22,25 @@ const BlueBanner = styled(Hero)`
 `;
 
 const GrayBanner = styled(Hero)`
-  ${tw`py-10 bg-gray-600 text-center`};
+  ${tw`pt-8 pb-16 bg-gray-600 text-center`};
 `;
 
 export const Contact: React.FC<ContactProps> = props => {
 return (
   <ContactWrapper>
-      { props.green &&
+      { props.purple &&
         <>
-          <GreenBanner>
+          <PurpleBanner>
             <Content>
-              <p>Kontakta oss och berätta mer om dig och dina behov.</p>
+              <p
+                css={`
+                  ${tw`text-gray-200`}
+                `}
+              >
+                Kontakta oss och berätta mer om dig och dina behov.
+              </p>
             </Content>
-          </GreenBanner>
+          </PurpleBanner>
         </>
       }
       { props.blue &&

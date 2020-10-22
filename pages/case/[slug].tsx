@@ -183,7 +183,7 @@ const CasePage = ({ selectedCase, cases }: CasePageProps) => {
         </MediaWrapper>
       ))}
 
-      <Contact green />
+      <Contact purple />
       <Content>
         <H3
           css={`
