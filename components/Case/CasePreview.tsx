@@ -41,14 +41,7 @@ const CaseWrapper = styled.div`
 
 const TagsWrapper = styled.div`
   ${tw`md:flex flex-wrap items-end overflow-hidden flex-wrap`}
-
-  @media (max-width: 767px) {
-    max-height: 82px;
-  }
-
-  @media (min-width: 768px) {
-    max-height: 41px;
-  }
+  max-height: 41px;
 `;
 
 const A = styled.a``;
