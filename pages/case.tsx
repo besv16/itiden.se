@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 import { CaseGrid } from '../components/Case';
 import { IndexHeader } from '../components/IndexHeader';
-import { Header, Page, Content, H2, H3 } from '../components/Layout';
+import { Header, Page, Content, H1, H3 } from '../components/Layout';
 import { getCasesFromJson } from '../data/case';
 import { Case } from '../models';
 
@@ -57,7 +57,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
       >
         <ContentWrapper paddingTop={'16rem'} paddingBottom={'0.5rem'} responsivePaddingTop>
           <Content>
-            <H2>Fin rubrik till case</H2>
+            <H1>Case</H1>
             <Paragraph paddingBottom={'1.5rem'}>
               Vi kan Ux, Html, Css, Javascript, React, React Native, Php,
               Laravel, Android, iOS, Mobil, Desktop, App, Webb, Next.js, CMS,
