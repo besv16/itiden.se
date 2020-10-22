@@ -6,7 +6,7 @@ import { LottieDesktop } from './LottieDesktop';
 import { LottieMobile } from './LottieMobile';
 
 const OuterWrapper = styled(Hero)`
-  ${tw`bg-gray-700 py-20`}
+  ${tw`bg-gray-700 py-4`}
 `;
 const WrapperMobile = styled.div`
   ${tw`sm:hidden`}
