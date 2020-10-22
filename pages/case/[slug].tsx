@@ -25,7 +25,7 @@ export const Header = styled.div`
   }
 `;
 
-const MediaWrapper = tw(Content)`mb-16 px-0 xs:px-6`;
+const MediaWrapper = tw(Content)`px-0 xs:px-6 sm:px-5 xl:(px-0)`;
 
 type MediaWrapperProps = {
   image: string;
@@ -37,6 +37,7 @@ const ResponsiveMediaWrapper = styled.div.attrs<MediaWrapperProps>(
     style: {
       backgroundImage: `url(${image})`,
       paddingTop: `${aspectRatio * 100}%`,
+      marginBottom: `4rem`,
     },
   })
 )`
