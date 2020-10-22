@@ -18,8 +18,7 @@ const HeaderWrapper = styled.div`
 `;
 
 const Content = styled.div<HeaderProps>`
-  ${tw`flex px-6 items-center justify-center flex-col md:(flex-row justify-between items-baseline px-5) flex-wrap pt-6 md:pt-5`};
-  max-width: 1120px;
+  ${tw`flex max-w-screen-xl px-6 pt-6 flex-wrap items-center justify-center flex-col md:(flex-row justify-between items-baseline px-5 pt-5) xl:(max-w-screen-lg px-0 m-auto)`}
 
   @media (max-width: 479px) {
     ${tw`pt-0`}
@@ -28,11 +27,6 @@ const Content = styled.div<HeaderProps>`
   @media (max-width: 767px) {
     ${tw`justify-start items-start`}
     height: ${(props: HeaderProps) => (props.noLogoFnutt ? '0px' : '80px')};
-  }
-
-  @media (min-width: 1120px) {
-    ${tw`px-0 m-auto`}
-    max-width: 1080px;
   }
 `;
 

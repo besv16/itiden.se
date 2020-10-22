@@ -25,7 +25,7 @@ export const Header = styled.div`
   }
 `;
 
-const MediaWrapper = tw(Content)`mb-16 px-0 xs:px-6`;
+const MediaWrapper = tw(Content)`mb-16`;
 
 type MediaWrapperProps = {
   image: string;

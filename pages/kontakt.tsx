@@ -19,13 +19,13 @@ const EmployeesWrapper = styled.div`
   ${tw`flex flex flex-wrap mt-10`};
 `;
 const TopContentWrapper = styled.div`
-  ${tw`flex md:(min-h-screen mt-0) items-center max-w-screen-lg mx-auto`}
+  ${tw`flex max-w-screen-xl px-6 items-center md:(min-h-screen mt-0 px-5) xl:(max-w-screen-lg px-0 mx-auto)`}
   @media (min-width: 768px) {
     margin-bottom: -104px;
   }
 `;
 const ContentWrapper = styled.div`
-  ${tw`mx-6 md:mx-5 lg:mx-auto max-w-screen-lg`}
+  ${tw`max-w-screen-xl px-6 mx-auto items-center md:(min-h-screen mt-0 px-5) xl:(max-w-screen-lg px-0 mx-auto)`}
 `;
 const QuarteredContent = styled.div`
   ${tw`flex flex-col mx-6 pt-56 md:(mx-5 w-3/4 pt-0) lg:(mx-0)`}
