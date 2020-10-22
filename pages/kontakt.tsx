@@ -28,7 +28,7 @@ const ContentWrapper = styled.div`
   ${tw`max-w-screen-xl px-6 mx-auto items-center md:(min-h-screen mt-0 px-5) xl:(max-w-screen-lg px-0 mx-auto)`}
 `;
 const QuarteredContent = styled.div`
-  ${tw`flex flex-col mx-6 pt-56 md:(mx-5 w-3/4 pt-0) lg:(mx-0)`}
+  ${tw`flex flex-col pt-56 md:(w-3/4 pt-0)`}
 `;
 const GrayBanner = styled(Hero)`
   ${tw`mt-16 py-10 bg-gray-600`}
