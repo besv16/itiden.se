@@ -49,7 +49,7 @@ const Adresswide = styled.a`
   ${tw`hidden md:inline text-gray-600 text-xl font-semibold cursor-pointer hover:text-purple-700`}
 `;
 const Divider = styled.div`
-  ${tw`w-full h-px bg-gray-500 mb-8 last:hidden md:hidden`};
+  ${tw`w-full h-px bg-gray-600 mb-8 last:hidden md:hidden`};
 `;
 
 const location = {
