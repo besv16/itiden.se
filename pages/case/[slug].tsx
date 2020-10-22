@@ -194,7 +194,7 @@ const CasePage = ({ selectedCase, cases }: CasePageProps) => {
       <Content>
         <H3
           css={`
-            ${tw`mt-32`}
+            ${tw`mt-32 mb-10 md:(mb-2)`}
           `}
         >
           Fler case
