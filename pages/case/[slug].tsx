@@ -80,7 +80,13 @@ const ContentWrapper = styled.div<{
 const CaseGridLabWrapper = styled.div`
   ${tw`mt-16 md:mt-6`}
 
-  @media (max-width: 767px) {
+  @media (max-width: 639px) {
+    & >div >div:last-of-type {
+      ${tw`mb-0`}
+    }
+  }
+
+  @media (min-width: 640px) and (max-width: 767px) {
     & >div >div:last-of-type {
       ${tw`-mb-4`}
     }
