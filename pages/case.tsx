@@ -31,7 +31,7 @@ const CaseGridLabWrapper = styled.div`
 
   @media (max-width: 767px) {
     & >div >div:last-of-type {
-      ${tw`mb-0`}
+      ${tw`-mb-4`}
     }
   }
 
