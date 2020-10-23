@@ -59,7 +59,7 @@ export const AboutIconsGroup = () => (
         <TechInfo>
           <p>
             Låt en app ta era tjänster till nästa nivå. Vi på Itiden är uppdaterade
-            inom de senaste ramverken och utvecklar till alla platformar.
+            inom de senaste ramverken och utvecklar till alla plattformar.
           </p>
         </TechInfo>
       </TechBox>
