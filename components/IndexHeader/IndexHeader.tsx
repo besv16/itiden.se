@@ -34,7 +34,7 @@ export const IndexHeader: React.FC<IndexHeaderProps> = ({
     <meta
       name="image"
       property="og:image"
-      content={imageSrc ? imageSrc : '/static/itiden-share.png'}
+      content={imageSrc ? imageSrc : '/static/itiden-share.jpg'}
     />
   </Head>
 );
