@@ -165,8 +165,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             <WideParagraph primary>
               För att ett projekt – vare sig det gäller för appar, webb eller
               andra tekniska lösningar – skall bli så bra som möjligt krävs
-              insikter. Därför tycker vi det är viktigt att vara med tidigt i
-              processen, gärna redan vid idéstadiet. Genom insikt och förståelse
+              insikter. Genom insikt och förståelse
               för dina behov anpassar vi teknik och väg framåt. Vi utgår inte
               från mallar utan skräddarsyr varje ensklit projekt för att nå
               bästa möjliga resultat. Vi jobbar transparent och under projektets
@@ -267,8 +266,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
           <QuarteredParagraph>
             För att ett projekt – vare sig det gäller för appar, webb eller
             andra tekniska lösningar – skall bli så bra som möjligt krävs
-            insikter. Därför tycker vi det är viktigt att vara med tidigt i
-            processen, gärna redan vid idéstadiet. Genom insikt och förståelse
+            insikter. Genom insikt och förståelse
             för dina behov anpassar vi teknik och väg framåt. Vi utgår inte från
             mallar utan skräddarsyr varje ensklit projekt för att nå bästa
             möjliga resultat. Vi jobbar transparent och under projektets gång är
