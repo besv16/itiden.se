@@ -9,7 +9,7 @@ const OuterWrapper = styled(Hero)`
   ${tw`bg-gray-700 py-4`}
 `;
 const WrapperMobile = styled.div`
-  ${tw`sm:hidden`}
+  ${tw`w-full sm:hidden`}
 `;
 const WrapperDesktop = styled.div`
   ${tw`hidden px-6 sm:(block px-5) lg:px-0`}
