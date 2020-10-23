@@ -26,8 +26,24 @@ const ContentWrapper = styled.div<{
   }
 `;
 
-const CaseGridWrapper = styled.div`
+const CaseGridLabWrapper = styled.div`
   ${tw`mt-16 md:mt-6`}
+
+  @media (max-width: 639px) {
+    & >div >div:last-of-type {
+      ${tw`mb-0`}
+    }
+  }
+
+  @media (min-width: 640px) and (max-width: 767px) {
+    & >div >div:last-of-type {
+      ${tw`-mb-4`}
+    }
+  }
+
+  & div {
+    ${tw`md:(mb-0)`}
+  }
 `;
 
 const Paragraph = styled.p<{ paddingBottom?: string }>`
@@ -70,9 +86,9 @@ const ErrorPage: NextComponentType<{}, {}, ErrorPageProps> = ({ cases }) => {
         </Content>
       </ContentWrapper>
       <Content>
-        <CaseGridWrapper>
+        <CaseGridLabWrapper>
           <CaseGrid cases={cases.filter(c => c.labs)} />
-        </CaseGridWrapper>
+        </CaseGridLabWrapper>
       </Content>
     </Page>
   );
