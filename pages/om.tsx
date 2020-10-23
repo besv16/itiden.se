@@ -377,9 +377,13 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             Itiden är stolta över att vara med och forma framtiden i vår bransch. 
             Med nästan tio års långt deltagande i ledningsgruppen för utbildningen 
             Webbutvecklare på Yrgo och kurser inom React och React Native är vi med 
-            och stöttar och vägleder nya och avancerade utvecklare. 
+            och stöttar och vägleder nya och avancerade utvecklare.
+          </WideParagraph>
+          <WideParagraph>
             Om du är intresserad av att prata med oss angående LIA/praktikmöjligheter 
-            går det bra att göra så via telefon eller mail.
+            går det bra att göra så via{' '}
+            <A href="tel:0709-597008">telefon</A> eller{' '}
+            <A href="mailto:hej@itiden.se?subject=LIA/praktikplats">mail</A>.
           </WideParagraph>
 
           <H3
@@ -418,9 +422,13 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             Itiden är stolta över att vara med och forma framtiden i vår bransch. 
             Med nästan tio års långt deltagande i ledningsgruppen för utbildningen 
             Webbutvecklare på Yrgo och kurser inom React och React Native är vi med 
-            och stöttar och vägleder nya och avancerade utvecklare. 
+            och stöttar och vägleder nya och avancerade utvecklare.
+          </QuarteredParagraph>
+          <QuarteredParagraph>
             Om du är intresserad av att prata med oss angående LIA/praktikmöjligheter 
-            går det bra att göra så via telefon eller mail.
+            går det bra att göra så via{' '}
+            <A href="tel:0709-597008">telefon</A> eller{' '}
+            <A href="mailto:hej@itiden.se?subject=LIA/praktikplats">mail</A>.
           </QuarteredParagraph>
 
           <H3
