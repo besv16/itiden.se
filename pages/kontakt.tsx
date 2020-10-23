@@ -25,7 +25,7 @@ const TopContentWrapper = styled.div`
   }
 `;
 const ContentWrapper = styled.div`
-  ${tw`max-w-screen-xl px-6 mx-auto items-center md:(min-h-screen mt-0 px-5) xl:(max-w-screen-lg px-0 mx-auto)`}
+  ${tw`max-w-screen-xl px-6 mx-auto items-center md:(mt-0 px-5) xl:(max-w-screen-lg px-0 mx-auto)`}
 `;
 const QuarteredContent = styled.div`
   ${tw`flex flex-col pt-56 md:(w-3/4 pt-0)`}
