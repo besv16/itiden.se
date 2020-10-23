@@ -6,7 +6,7 @@ export const GlobalStyles = createGlobalStyle`
   ${reboot({ black: '0, 0, 0' })}
 
   body {
-    ${tw`bg-gray-800 text-gray-300 font-body relative oldstyle-nums`}
+    ${tw`bg-gray-800 text-gray-300 font-body relative`}
 
     h1::selection,
     h2::selection,
