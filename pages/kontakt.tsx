@@ -64,7 +64,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({
 }) => {
   return (
     <Page>
-      <IndexHeader title="Kontakt" />
+      <IndexHeader title="/kontakt" />
       <TopContentWrapper>
         <QuarteredContent>
           <h1>Vi ser fram emot att höra från dig.</h1>

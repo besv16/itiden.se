@@ -44,7 +44,7 @@ const Paragraph = styled.p<{ paddingBottom?: string }>`
 const ErrorPage: NextComponentType<{}, {}, ErrorPageProps> = ({ cases }) => {
   return (
     <Page>
-      <IndexHeader />
+      <IndexHeader title="/404" />
       <Header role="banner">
         <ContentWrapper paddingTop={'16rem'} paddingBottom={'0.5rem'} responsivePaddingTop>
           <Content>

@@ -14,7 +14,7 @@ export const IndexHeader: React.FC<IndexHeaderProps> = ({
 }) => (
   <Head>
     <title>
-      Itiden - {title ? title : 'Webbutveckling | Apputveckling | Göteborg'}
+      Itiden{title ? title : ' – Digital byrå i Göteborg med fokus på skräddarsydda webb- och applösningar.'}
     </title>
     <meta
       name="Description"
@@ -27,8 +27,8 @@ export const IndexHeader: React.FC<IndexHeaderProps> = ({
     <meta
       name="title"
       property="og:title"
-      content={`Itiden - ${
-        title ? title : 'Webbutveckling | Apputveckling | Göteborg'
+      content={`Itiden${
+        title ? title : ' - Digital byrå i Göteborg med fokus på skräddarsydda webb- och applösningar.'
       }`}
     />
     <meta

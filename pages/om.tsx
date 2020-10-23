@@ -157,7 +157,7 @@ const Caption = styled.div`
 const IndexPage: NextComponentType<{}, {}> = () => {
   return (
     <Page>
-      <IndexHeader title="Om" />
+      <IndexHeader title="/om" />
       <Header role="banner">
         <ContentWrapperMobile>
           <Content>

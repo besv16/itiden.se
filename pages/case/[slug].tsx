@@ -264,18 +264,19 @@ const CaseHeader: React.FC<Case> = ({
 }) => {
   const imageUrl = desktopMedia[0] ? desktopMedia[0].file.url : '';
   const descriptionString: string = documentToPlainTextString(description);
+  title = title.toLowerCase();
 
   return (
     <Head>
-      <title>Itiden - case - {title}</title>
+      <title>Itiden/case/{title}</title>
       <meta name="Description" content={descriptionString} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@itidengbg" />
-      <meta name="twitter:title" content={`Itiden - case - ${title}`} />
+      <meta name="twitter:title" content={`Itiden/case/${title}`} />
       <meta name="twitter:description" content={descriptionString} />
       <meta name="twitter:creator" content="@itidengbg" />
       <meta name="twitter:image" content={imageUrl} />
-      <meta property="og:title" content={`Itiden - case - ${title}`} />
+      <meta property="og:title" content={`Itiden/case/${title}`} />
       <meta property="og:type" content="article" />
       <meta property="og:url" content={`https://www.itiden.se/case/${slug}`} />
       <meta property="og:image" content={imageUrl} />

@@ -60,7 +60,7 @@ const Paragraph = styled.p<{ paddingBottom?: string }>`
 const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
   return (
     <Page>
-      <IndexHeader title="Case" />
+      <IndexHeader title="/case" />
       <Header 
         role="banner"
         css={
