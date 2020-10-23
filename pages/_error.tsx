@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import tw from 'twin.macro';
 import { CaseGrid } from '../components/Case';
 import { IndexHeader } from '../components/IndexHeader';
-import { Header, Page, Content, H2, H3 } from '../components/Layout';
+import { Header, Page, Content, H1, H3 } from '../components/Layout';
 import { getCasesFromJson } from '../data/case';
 import { Case } from '../models';
 
@@ -64,7 +64,7 @@ const ErrorPage: NextComponentType<{}, {}, ErrorPageProps> = ({ cases }) => {
       <Header role="banner">
         <ContentWrapper paddingTop={'16rem'} paddingBottom={'0.5rem'} responsivePaddingTop>
           <Content>
-            <H2>404</H2>
+            <H1>404</H1>
             <Paragraph paddingBottom={'1.5rem'}>
               Sedärja, den sidan hittades tyvärr inte. Kanske letar du efter något av våra case, de finner du isf nedan.
             </Paragraph>
