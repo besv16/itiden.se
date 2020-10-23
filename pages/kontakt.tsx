@@ -16,7 +16,7 @@ interface IndexPageProps {
 }
 
 const EmployeesWrapper = styled.div`
-  ${tw`flex flex flex-wrap mt-10`};
+  ${tw`flex flex flex-wrap mt-10 -mb-8 md:(mb-0)`};
 `;
 const TopContentWrapper = styled.div`
   ${tw`flex max-w-screen-xl px-6 items-center md:(min-h-screen mt-0 px-5) xl:(max-w-screen-lg px-0 mx-auto)`}
