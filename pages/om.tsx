@@ -11,6 +11,7 @@ import {
   Content,
   Paragraph,
   Hero,
+  H1,
   H3,
   Contact,
 } from '../components/Layout';
@@ -160,7 +161,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
       <Header role="banner">
         <ContentWrapperMobile>
           <Content>
-            <H3>Kunskap genom insikt och erfarenhet</H3>
+            <H1>Kunskap och insikt</H1>
             <WideParagraph primary>
               För att ett projekt – vare sig det gäller för appar, webb eller
               andra tekniska lösningar – skall bli så bra som möjligt krävs
@@ -262,7 +263,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
       </KeywordsWrapperMobile>
       <ContentWrapperDesktop>
         <Content>
-          <H3>Kunskap genom insikt och erfarenhet</H3>
+          <H1>Kunskap och insikt</H1>
           <QuarteredParagraph>
             För att ett projekt – vare sig det gäller för appar, webb eller
             andra tekniska lösningar – skall bli så bra som möjligt krävs
@@ -395,8 +396,8 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             . Du är varm välkommen att komma in till oss på en kopp kaffe för
             att lära känna oss lite bättre. Det finns bra parkeringsmöjligheter
             precis utanför kontoret. Åker man med kollektivtrafiken går man av
-            vid Kungsportsplatsen. Vi är alltid intresserade av intressanta
-            sammarbeten och bra folk så hör gärna av dig vi{' '}
+            vid Kungsportsplatsen. Vi är alltid intresserade av bra samarbeten 
+            och folk så hör gärna av dig via{' '}
             <A href="tel:0709-597008">telefon</A> eller{' '}
             <A href="mailto:hej@itiden.se">mail</A>.
           </WideParagraph>
@@ -435,8 +436,8 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             . Du är varm välkommen att komma in till oss på en kopp kaffe för
             att lära känna oss lite bättre. Det finns bra parkeringsmöjligheter
             precis utanför kontoret. Åker man med kollektivtrafiken går man av
-            vid Kungsportsplatsen. Vi är alltid intresserade av intressanta
-            sammarbeten och bra folk så hör gärna av dig vi{' '}
+            vid Kungsportsplatsen. Vi är alltid intresserade av bra samarbeten 
+            och folk så hör gärna av dig via{' '}
             <A href="tel:0709-597008">telefon</A> eller{' '}
             <A href="mailto:hej@itiden.se">mail</A>.
           </QuarteredParagraph>
