@@ -374,11 +374,12 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             Itiden i framtiden
           </H3>
           <WideParagraph>
-            Itiden är stolta över att vara med och forma framtiden i vår
-            bransch. Med nästan tio års långt deltagande i ledningsgruppen för
-            utbildningen Webbutvecklare på Yrgo och kurser inom React och React
-            Native är vi med och stöttar och vägleder nya och avancerade
-            utvecklare.
+            Itiden är stolta över att vara med och forma framtiden i vår bransch. 
+            Med nästan tio års långt deltagande i ledningsgruppen för utbildningen 
+            Webbutvecklare på Yrgo och kurser inom React och React Native är vi med 
+            och stöttar och vägleder nya och avancerade utvecklare. 
+            Om du är intresserad av att prata med oss angående LIA/praktikmöjligheter 
+            går det bra att göra så via telefon eller mail.
           </WideParagraph>
 
           <H3
@@ -393,7 +394,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             <A href="https://goo.gl/maps/Dqa7A3jFhuyatxjC8">
               Kungstorget 11–12
             </A>
-            . Du är varm välkommen att komma in till oss på en kopp kaffe för
+            . Du är varmt välkommen att komma in till oss på en kopp kaffe för
             att lära känna oss lite bättre. Det finns bra parkeringsmöjligheter
             precis utanför kontoret. Åker man med kollektivtrafiken går man av
             vid Kungsportsplatsen. Vi är alltid intresserade av bra samarbeten 
@@ -414,11 +415,12 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             Itiden i framtiden
           </H3>
           <QuarteredParagraph>
-            Itiden är stolta över att vara med och forma framtiden i vår
-            bransch. Med nästan tio års långt deltagande i ledningsgruppen för
-            utbildningen Webbutvecklare på Yrgo och kurser inom React och React
-            Native är vi med och stöttar och vägleder nya och avancerade
-            utvecklare.
+            Itiden är stolta över att vara med och forma framtiden i vår bransch. 
+            Med nästan tio års långt deltagande i ledningsgruppen för utbildningen 
+            Webbutvecklare på Yrgo och kurser inom React och React Native är vi med 
+            och stöttar och vägleder nya och avancerade utvecklare. 
+            Om du är intresserad av att prata med oss angående LIA/praktikmöjligheter 
+            går det bra att göra så via telefon eller mail.
           </QuarteredParagraph>
 
           <H3
@@ -433,7 +435,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             <A href="https://goo.gl/maps/Dqa7A3jFhuyatxjC8">
               Kungstorget 11–12
             </A>
-            . Du är varm välkommen att komma in till oss på en kopp kaffe för
+            . Du är varmt välkommen att komma in till oss på en kopp kaffe för
             att lära känna oss lite bättre. Det finns bra parkeringsmöjligheter
             precis utanför kontoret. Åker man med kollektivtrafiken går man av
             vid Kungsportsplatsen. Vi är alltid intresserade av bra samarbeten 
