@@ -24,6 +24,10 @@ const ContentWrapper = styled.div<{
     ${props =>
       props.responsivePaddingTop != null && `padding-top: 12.5rem`};
   }
+
+  @media screen and (max-height: 480px) {
+    ${tw`pt-16`}
+  }
 `;
 
 const CaseGridLabWrapper = styled.div`
