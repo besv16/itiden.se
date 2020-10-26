@@ -22,6 +22,10 @@ const ContentWrapperMobile = styled.div`
   @media (max-width: 767px) {
     padding-top: 12.5rem;
   }
+
+  @media screen and (max-height: 480px) {
+    ${tw`pt-16`}
+  }
 `;
 const ContentWrapperDesktop = styled.div`
   ${tw`hidden md:block mt-20 pt-3`};
