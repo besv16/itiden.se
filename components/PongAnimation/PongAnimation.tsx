@@ -12,6 +12,7 @@ const WrapperMobile = styled.div`
   ${tw`w-full sm:hidden`}
 `;
 const WrapperDesktop = styled.div`
+  width: 86%;
   ${tw`hidden px-6 sm:(block px-5) lg:px-0`}
 `;
 
