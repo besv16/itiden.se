@@ -26,10 +26,9 @@ const Image = styled.img`
   transform: scale(1);
   transition: all 0.5s;
 
-  @media (min-width: 768px) {
-    &:hover {
-      transform: scale(1.02);
-    }
+  &:hover {
+    transform: scale(1.02);
+  }
 `;
 
 const CaseWrapper = styled.div`
