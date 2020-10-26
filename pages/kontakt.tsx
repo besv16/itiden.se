@@ -30,8 +30,8 @@ const ContentWrapper = styled.div`
 const QuarteredContent = styled.div`
   ${tw`flex flex-col pt-56 md:(w-3/4 pt-0)`}
 
-  @media screen and (max-height: 480px) {
-    ${tw`pt-20`}
+  @media screen and (max-height: 580px) {
+    ${tw`pt-40 pb-32`}
   }
 `;
 const GrayBanner = styled(Hero)`
