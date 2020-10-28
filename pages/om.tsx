@@ -152,7 +152,7 @@ const ImageWrapper = styled.div`
 const Caption = styled.div`
   ${tw`bg-gray-600 flex items-center py-4 px-5`}
   min-height: 76px;
-  
+
   & p {
     ${tw`m-0 text-image font-semibold`}
   }
@@ -165,17 +165,17 @@ const IndexPage: NextComponentType<{}, {}> = () => {
       <Header role="banner">
         <ContentWrapperMobile>
           <Content>
-            <H1>Kunskap och insikt</H1>
+            <H1>Skräddarsydda lösningar</H1>
             <WideParagraph primary>
               För att ett projekt – vare sig det gäller för appar, webb eller
               andra tekniska lösningar – skall bli så bra som möjligt krävs
-              insikter. Genom insikt och förståelse
-              för dina behov anpassar vi teknik och väg framåt. Vi utgår inte
-              från mallar utan skräddarsyr varje ensklit projekt för att nå
-              bästa möjliga resultat. Vi jobbar transparent och under projektets
-              gång är du delaktig hela vägen i produktionen fram till färdig
-              produkt. På detta vis kan vi ta snabba beslut om förutsättningar
-              för projektet förändras och vi kan tillsammans nå önskat resultat.
+              insikter. Genom insikt och förståelse för dina behov anpassar vi
+              teknik och väg framåt. Vi utgår inte från mallar utan skräddarsyr
+              varje ensklit projekt för att nå bästa möjliga resultat. Vi jobbar
+              transparent och under projektets gång är du delaktig hela vägen i
+              produktionen fram till färdig produkt. På detta vis kan vi ta
+              snabba beslut om förutsättningar för projektet förändras och vi
+              kan tillsammans nå önskat resultat.
             </WideParagraph>
           </Content>
         </ContentWrapperMobile>
@@ -184,7 +184,6 @@ const IndexPage: NextComponentType<{}, {}> = () => {
         <AboutIconsGroup />
       </GrayBanner>
       <KeywordsWrapperMobile>
-        
         <ImageWrapperMobile>
           <img src="/static/soffa-mobil.jpg" alt="Itidens kontor"></img>
         </ImageWrapperMobile>
@@ -216,13 +215,13 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             instrument, tillgång till pingisbord samt kör löpande
             miniturneringar i tv-spel.
           </WideParagraph>
-          
+
           <H3
             css={`
               ${tw`mt-10`}
             `}
           >
-          Itiden förenklat
+            Itiden förenklat
           </H3>
           <Keywords>
             <KeywordsGroup>
@@ -270,13 +269,13 @@ const IndexPage: NextComponentType<{}, {}> = () => {
           <QuarteredParagraph>
             För att ett projekt – vare sig det gäller för appar, webb eller
             andra tekniska lösningar – skall bli så bra som möjligt krävs
-            insikter. Genom insikt och förståelse
-            för dina behov anpassar vi teknik och väg framåt. Vi utgår inte från
-            mallar utan skräddarsyr varje ensklit projekt för att nå bästa
-            möjliga resultat. Vi jobbar transparent och under projektets gång är
-            du delaktig hela vägen i produktionen fram till färdig produkt. På
-            detta vis kan vi ta snabba beslut om förutsättningar för projektet
-            förändras och vi kan tillsammans nå önskat resultat.
+            insikter. Genom insikt och förståelse för dina behov anpassar vi
+            teknik och väg framåt. Vi utgår inte från mallar utan skräddarsyr
+            varje ensklit projekt för att nå bästa möjliga resultat. Vi jobbar
+            transparent och under projektets gång är du delaktig hela vägen i
+            produktionen fram till färdig produkt. På detta vis kan vi ta snabba
+            beslut om förutsättningar för projektet förändras och vi kan
+            tillsammans nå önskat resultat.
           </QuarteredParagraph>
 
           <ImageWrapperDesktop>
@@ -376,14 +375,15 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             Itiden i framtiden
           </H3>
           <WideParagraph>
-            Itiden är stolta över att vara med och forma framtiden i vår bransch. 
-            Med nästan tio års långt deltagande i ledningsgruppen för utbildningen 
-            Webbutvecklare på Yrgo och kurser inom React och React Native är vi med 
-            och stöttar och vägleder nya och avancerade utvecklare.
+            Itiden är stolta över att vara med och forma framtiden för vår
+            bransch. Med nästan tio års långt deltagande i ledningsgruppen för
+            utbildningen Webbutvecklare på Yrgo och kurser inom React och React
+            Native är vi med och stöttar och vägleder nya och erfarna
+            utvecklare.
           </WideParagraph>
           <WideParagraph>
-            Om du är intresserad av att prata med oss angående LIA/praktikmöjligheter 
-            går det bra att göra så via{' '}
+            Om du är intresserad av att prata med oss angående
+            LIA/praktikmöjligheter går det bra att göra så via{' '}
             <A href="tel:0709-597008">telefon</A> eller{' '}
             <A href="mailto:hej@itiden.se?subject=LIA/praktikplats">mail</A>.
           </WideParagraph>
@@ -403,7 +403,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             . Du är varmt välkommen att komma in till oss på en kopp kaffe för
             att lära känna oss lite bättre. Det finns bra parkeringsmöjligheter
             precis utanför kontoret. Åker man med kollektivtrafiken går man av
-            vid Kungsportsplatsen. Vi är alltid intresserade av bra samarbeten 
+            vid Kungsportsplatsen. Vi är alltid intresserade av bra samarbeten
             och folk så hör gärna av dig via{' '}
             <A href="tel:0709-597008">telefon</A> eller{' '}
             <A href="mailto:hej@itiden.se">mail</A>.
@@ -421,14 +421,15 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             Itiden i framtiden
           </H3>
           <QuarteredParagraph>
-            Itiden är stolta över att vara med och forma framtiden i vår bransch. 
-            Med nästan tio års långt deltagande i ledningsgruppen för utbildningen 
-            Webbutvecklare på Yrgo och kurser inom React och React Native är vi med 
-            och stöttar och vägleder nya och avancerade utvecklare.
+            Itiden är stolta över att vara med och forma framtiden i vår
+            bransch. Med nästan tio års långt deltagande i ledningsgruppen för
+            utbildningen Webbutvecklare på Yrgo och kurser inom React och React
+            Native är vi med och stöttar och vägleder nya och avancerade
+            utvecklare.
           </QuarteredParagraph>
           <QuarteredParagraph>
-            Om du är intresserad av att prata med oss angående LIA/praktikmöjligheter 
-            går det bra att göra så via{' '}
+            Om du är intresserad av att prata med oss angående
+            LIA/praktikmöjligheter går det bra att göra så via{' '}
             <A href="tel:0709-597008">telefon</A> eller{' '}
             <A href="mailto:hej@itiden.se?subject=LIA/praktikplats">mail</A>.
           </QuarteredParagraph>
@@ -448,7 +449,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             . Du är varmt välkommen att komma in till oss på en kopp kaffe för
             att lära känna oss lite bättre. Det finns bra parkeringsmöjligheter
             precis utanför kontoret. Åker man med kollektivtrafiken går man av
-            vid Kungsportsplatsen. Vi är alltid intresserade av bra samarbeten 
+            vid Kungsportsplatsen. Vi är alltid intresserade av bra samarbeten
             och folk så hör gärna av dig via{' '}
             <A href="tel:0709-597008">telefon</A> eller{' '}
             <A href="mailto:hej@itiden.se">mail</A>.

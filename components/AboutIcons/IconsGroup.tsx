@@ -42,7 +42,7 @@ const TechInfo = styled.div`
   @media (min-width: 480px) and (max-width: 639px) {
     ${tw`w-4/5`}
   }
-  
+
   @media (min-width: 640px) {
     max-width: 327px;
   }
@@ -58,8 +58,9 @@ export const AboutIconsGroup = () => (
         <TechHeading>Apputveckling</TechHeading>
         <TechInfo>
           <p>
-            Låt en app ta era tjänster till nästa nivå. Vi på Itiden är uppdaterade
-            inom de senaste ramverken och utvecklar till alla plattformar.
+            Låt en app ta era tjänster till nästa nivå. Vi på Itiden är
+            uppdaterade inom de senaste ramverken och utvecklar till alla
+            plattformar.
           </p>
         </TechInfo>
       </TechBox>
@@ -82,8 +83,8 @@ export const AboutIconsGroup = () => (
         <TechHeading>Systemintegration</TechHeading>
         <TechInfo>
           <p>
-            Backend, frontend, server, serverless och cloud. Databaser och api etc.
-            Med stor teknisk kunskap hjälper dig med all integration.
+            Backend, frontend, server, serverless och cloud. Databaser och api
+            etc. Med stor teknisk kunskap hjälper vi dig med all integration.
           </p>
         </TechInfo>
       </TechBox>

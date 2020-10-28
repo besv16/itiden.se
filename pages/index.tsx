@@ -56,8 +56,8 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
       <HeaderWide>
         <Content>
           <H1>
-            Vi kan kod. Med lång erfarenhet av webb- &amp; apputveckling,
-            strategi, ux och teknik hjälper vi på Itiden dig med rätt lösning.
+            Med lång erfarenhet av webb- &amp; apputveckling, strategi, ux och
+            teknik hjälper vi på Itiden dig med rätt lösning.
           </H1>
           <TagsWrapper>
             <Tags
@@ -108,20 +108,11 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
       </ContentWrapperPurple>
       <CaseWrapper>
         <Content>
-          <H3
-            css={tw`mb-10`}
-          >
-            Case
-          </H3>
+          <H3 css={tw`mb-10`}>Case</H3>
           <CaseGrid cases={cases} />
-          <ParagraphCentered
-            css={tw`-mt-4 -mb-8 md:(mt-0 mb-0)`}
-          >
+          <ParagraphCentered css={tw`-mt-4 -mb-8 md:(mt-0 mb-0)`}>
             <Link href="/case" passHref>
-              <Button
-               css={tw`my-0`}
-              >
-                Gå till Case</Button>
+              <Button css={tw`my-0`}>Gå till Case</Button>
             </Link>
           </ParagraphCentered>
         </Content>
