@@ -49,6 +49,10 @@ const CaseWrapper = styled.div`
   ${tw`mt-24 md:mt-20`}
 `;
 
+const CreativityTitle = styled(H3).attrs({
+  as: 'h2',
+})``;
+
 const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
   return (
     <Page>
@@ -85,7 +89,7 @@ const IndexPage: NextComponentType<{}, {}, IndexPageProps> = ({ cases }) => {
               text-left md:text-center
             `}
           >
-            <H3>Teknisk kreativitet</H3>
+            <CreativityTitle>Teknisk kreativitet</CreativityTitle>
             <Paragraph>
               Kärnan i vår verksamhet kommer från vårt stora intresse för teknik
               och innovation. Vi jobbar med många olika språk och ramverk och

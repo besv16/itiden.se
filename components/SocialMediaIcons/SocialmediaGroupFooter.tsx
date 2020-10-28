@@ -8,7 +8,7 @@ export const SocialMediaContainer = styled.div`
 `;
 
 export const SocialMediaLink = styled.a`
-  ${tw``}
+  ${tw`px-3 py-4`}
 `;
 
 const FacebookLogo = styled(Facebook)`
@@ -16,11 +16,12 @@ const FacebookLogo = styled(Facebook)`
 `;
 
 const LinkedInLogo = styled(LinkedIn)`
-  ${tw`fill-current h-6 text-gray-500 mx-4 md:text-gray-250 hover:text-purple-700 hover:md:text-teal-400`};
+  ${tw`fill-current h-6 text-gray-500 md:text-gray-250 hover:text-purple-700 hover:md:text-teal-400`};
 `;
 
 const InstagramLogo = styled(Instagram)`
   ${tw`fill-current h-6 text-gray-500 md:text-gray-250 hover:text-purple-700 hover:md:text-teal-400`};
+  margin-right: -0.75rem;
 `;
 
 export const SocialmediaGroupFooter = () => (
