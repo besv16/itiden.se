@@ -53,17 +53,7 @@ export default class MyDocument extends Document {
             type="image/x-icon"
             href="/static/favicon.ico"
           />
-          <link
-            rel="preconnect"
-            href="https://fonts.gstatic.com/"
-            crossOrigin="anonymous"
-          />
           <link rel="preconnect" href="https://img3.usefathom.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
-            rel="stylesheet"
-          />
-          {/* <link href="https://use.typekit.net/fqr0acc.css" rel="stylesheet" /> */}
         </Head>
         <body>
           <Main />

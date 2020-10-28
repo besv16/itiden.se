@@ -47,7 +47,8 @@
     "styled-jsx": "^3.3.0",
     "styled-reboot": "3.0.1",
     "tailwindcss": "^1.8.10",
-    "twin.macro": "^1.10.0"
+    "twin.macro": "^1.10.0",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -64,6 +65,7 @@
     "@types/storybook__react": "^4.0.2",
     "@types/styled-components": "^5.1.4",
     "@types/ua-parser-js": "^0.7.33",
+    "@types/webfontloader": "^1.6.32",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
     "@zeit/next-css": "^1.0.1",
