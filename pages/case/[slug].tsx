@@ -25,7 +25,9 @@ export const Header = styled.div`
   }
 `;
 
-const MediaWrapper = tw(Content)`px-0 xs:px-6 sm:px-5 xl:(px-0)`;
+const MediaWrapper = styled(Content)`
+  ${tw`px-0 xs:px-6 sm:px-5 xl:(px-0)`}
+`;
 
 type MediaWrapperProps = {
   image: string;
@@ -81,13 +83,13 @@ const CaseGridLabWrapper = styled.div`
   ${tw`mt-16 md:mt-6`}
 
   @media (max-width: 639px) {
-    & >div >div:last-of-type {
+    & > div > div:last-of-type {
       ${tw`mb-0`}
     }
   }
 
   @media (min-width: 640px) and (max-width: 767px) {
-    & >div >div:last-of-type {
+    & > div > div:last-of-type {
       ${tw`-mb-4`}
     }
   }
