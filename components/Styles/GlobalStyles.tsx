@@ -33,4 +33,12 @@ export const GlobalStyles = createGlobalStyle`
   a {
     ${tw`underline`}
   }
+  .lazyload {
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+  }
+  .lazyloaded {
+    -webkit-filter: blur(0);
+    filter: blur(0);
+  }
 `;

@@ -59,14 +59,21 @@ export const CasePreview: React.FC<CasePreviewProps> = ({
 
   return (
     <CaseWrapper>
-      <ImageContainer>
-        <Link href={`/case/[slug]`} as={`/case/${slug}`} passHref>
+      <ImageContainer
+        style={{
+          height: 0,
+          paddingTop: `${(img.file.details.image.height /
+            img.file.details.image.width) *
+            100}%`,
+        }}
+      >
+        <Link href={`/case/${slug}`} passHref>
           <A>
             <LazyImage media={img} />
           </A>
         </Link>
       </ImageContainer>
-      <Link href={`/case/[slug]`} as={`/case/${slug}`} passHref>
+      <Link href={`/case/${slug}`} passHref>
         <A>
           <H4>{title}</H4>
         </A>
@@ -93,9 +100,11 @@ const LazyImage: React.FC<{
   const url = media.file.url;
   return (
     <Image
+      src={`${url}?q=15&w=300`}
       alt={media.title}
       data-src={`${url}?q=80&w=1404`}
       className="lazyload"
+      style={{ position: 'absolute', top: 0 }}
     />
   );
 };
