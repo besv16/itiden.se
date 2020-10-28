@@ -35,7 +35,7 @@ export type HitData = PageHitData | CaseHitData | EmployeeHitData;
 
 const PageHit: React.FC<PageHitData> = ({ slug, title }) => {
   return (
-    <Link href={`/page?slug=${slug}`} as={`/${slug}`} passHref>
+    <Link href={`/${slug}`} passHref>
       <a>{title}</a>
     </Link>
   );
@@ -45,7 +45,7 @@ const CaseHit: React.FC<CaseHitData> = ({ slug, title }) => {
   const { onRequestClose } = React.useContext(SearchContext);
 
   return (
-    <Link href={`/case?slug=${slug}`} as={`/case/${slug}`} passHref>
+    <Link href={`/case/${slug}`} passHref>
       <a onClick={onRequestClose}>{title}</a>
     </Link>
   );
