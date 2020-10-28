@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import tw from 'twin.macro';
 
-export const Wrapper = styled.div<{ height: string }>`
+export const Wrapper = styled.div<{ viewportHeight: string }>`
   ${tw`flex flex-col justify-end -mt-10`}
-  height: ${p => p.height};
+  height: ${p => p.viewportHeight};
 
   @media screen and (min-width: 640px) {
     ${tw`pt-48`}
@@ -35,7 +35,9 @@ export const HeaderWide: React.FC = ({ children }) => {
   return (
     <Wrapper
       role="main"
-      height={windowHeight !== undefined ? `${windowHeight}px` : '100vh'}
+      viewportHeight={
+        windowHeight !== undefined ? `${windowHeight}px` : '100vh'
+      }
     >
       {children}
     </Wrapper>
