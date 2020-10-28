@@ -8,6 +8,6 @@ const ArrowContainer = styled.div`
 
 export const Arrow = () => (
   <ArrowContainer>
-    <img src="/static/arrow.svg" alt="Pil" />
+    <img src="/static/arrow.svg" alt="Pil" width="23" height="13" />
   </ArrowContainer>
 );
