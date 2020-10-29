@@ -225,7 +225,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
           </H3>
           <Keywords>
             <KeywordsGroup>
-              <Keyword>Utveckling</Keyword>
+              <Keyword>Webbutveckling</Keyword>
               <Keyword>Integration</Keyword>
               <Keyword>Strategi</Keyword>
               <Keyword>Design</Keyword>
@@ -243,7 +243,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
               <Keyword>Wordpress</Keyword>
             </KeywordsGroup>
             <KeywordsGroup>
-              <Keyword>E-handel</Keyword>
+              <Keyword>Apputveckling</Keyword>
               <Keyword>React</Keyword>
               <Keyword>React Native</Keyword>
               <Keyword>AR</Keyword>
@@ -313,7 +313,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             <H3>Itiden förenklat</H3>
             <Keywords>
               <KeywordsGroup>
-                <Keyword>Utveckling</Keyword>
+                <Keyword>Webbutveckling</Keyword>
                 <Keyword>Integration</Keyword>
                 <Keyword>Strategi</Keyword>
                 <Keyword>Design</Keyword>
@@ -331,7 +331,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
                 <Keyword>Wordpress</Keyword>
               </KeywordsGroup>
               <KeywordsGroup>
-                <Keyword>E-handel</Keyword>
+                <Keyword>Apputveckling</Keyword>
                 <Keyword>React</Keyword>
                 <Keyword>React Native</Keyword>
                 <Keyword>AR</Keyword>
