@@ -97,7 +97,7 @@ export const ContactsGroup: React.FC<ContactsGroupProps> = props => {
                   <FindLiteIcon />
                 </LiteIconWrapper>
                 <ContactInfo>
-                  Kungstorget 11-12
+                  Kungstorget 11-12,
                   <br />
                   411 41 Göteborg
                 </ContactInfo>
@@ -115,7 +115,7 @@ export const ContactsGroup: React.FC<ContactsGroupProps> = props => {
               <LiteIconWrapper>
                 <PhoneLiteIcon />
               </LiteIconWrapper>
-              <ContactInfo>0709-597008</ContactInfo>
+              <ContactInfo>0709-59 70 08</ContactInfo>
             </ContactLink>
           </ContactBox>
         </>
