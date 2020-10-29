@@ -14,7 +14,7 @@ interface CasePreviewProps extends Case {
 }
 
 const ImageContainer = styled(animated.div)`
-  ${tw`rounded-sm overflow-hidden relative`}
+  ${tw`overflow-hidden relative`}
   }
 `;
 
@@ -32,7 +32,7 @@ const Image = styled.img`
 `;
 
 const CaseWrapper = styled.div`
-  ${tw`mb-16`}
+  ${tw`mb-16 w-full`}
   @media (min-width: 768px) {
     width: calc(50% - 0.6rem);
   }
