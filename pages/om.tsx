@@ -150,12 +150,11 @@ const ImageWrapper = styled.div`
 `;
 
 const Caption = styled.div`
-  ${tw`bg-gray-600 flex items-center py-4 px-5`}
+  ${tw`bg-gray-600 flex items-start py-4 px-5`}
   min-height: 76px;
 
   @media (min-width: 768px) and (max-width: 1004px) {
     min-height: 95px;
-    ${tw`items-start`}
   }
 
   & p {
@@ -270,7 +269,7 @@ const IndexPage: NextComponentType<{}, {}> = () => {
       </KeywordsWrapperMobile>
       <ContentWrapperDesktop>
         <Content>
-          <H1>Kunskap och insikt</H1>
+          <H1>Skräddarsydda lösningar</H1>
           <QuarteredParagraph>
             För att ett projekt – vare sig det gäller för appar, webb eller
             andra tekniska lösningar – skall bli så bra som möjligt krävs
@@ -426,10 +425,10 @@ const IndexPage: NextComponentType<{}, {}> = () => {
             Itiden i framtiden
           </H3>
           <QuarteredParagraph>
-            Itiden är stolta över att vara med och forma framtiden i vår
+            Itiden är stolta över att vara med och forma framtiden för vår
             bransch. Med nästan tio års långt deltagande i ledningsgruppen för
             utbildningen Webbutvecklare på Yrgo och kurser inom React och React
-            Native är vi med och stöttar och vägleder nya och avancerade
+            Native är vi med och stöttar och vägleder nya och erfarna
             utvecklare.
           </QuarteredParagraph>
           <QuarteredParagraph>
@@ -478,7 +477,10 @@ const IndexPage: NextComponentType<{}, {}> = () => {
           <ImageWrapper>
             <img src="/static/arbetsrum.jpg" alt="Itidens kontor"></img>
             <Caption>
-              <p>Med hela laget i samma rum är det enkelt att bolla tankar mellan oss.</p>
+              <p>
+                Med hela laget i samma rum är det enkelt att bolla tankar mellan
+                oss.
+              </p>
             </Caption>
           </ImageWrapper>
         </ItidenImagesWrapper>
