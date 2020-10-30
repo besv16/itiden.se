@@ -459,21 +459,21 @@ const IndexPage: NextComponentType<{}, {}> = () => {
       <Content>
         <ItidenImagesWrapper>
           <ImageWrapper>
-            <img src="/static/studio.jpg" alt="Itidens studio"></img>
+            <img src="/static/terass.jpg" alt="Itidens takterass"></img>
             <Caption>
-              <p>Vi har en liten musikstudio med sköna jammingsmöjligheter</p>
+              <p>Lunch och kaffe på Göteborgs kanske skönaste takterass?</p>
             </Caption>
           </ImageWrapper>
           <ImageWrapper>
-            <img src="/static/studio.jpg" alt="Itidens studio"></img>
+            <img src="/static/jam.jpg" alt="Itidens musikstudio"></img>
             <Caption>
-              <p>Vi har en liten musikstudio med sköna jammingsmöjligheter</p>
+              <p>Henrik och Filip öser gärna i vår härliga musikstudio.</p>
             </Caption>
           </ImageWrapper>
           <ImageWrapper>
-            <img src="/static/studio.jpg" alt="Itidens studio"></img>
+            <img src="/static/arbetsrum.jpg" alt="Itidens kontor"></img>
             <Caption>
-              <p>Vi har en liten musikstudio med sköna jammingsmöjligheter</p>
+              <p>Med hela laget i samma rum är det enkelt att bolla tankar mellan oss.</p>
             </Caption>
           </ImageWrapper>
         </ItidenImagesWrapper>
