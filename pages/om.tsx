@@ -153,7 +153,7 @@ const Caption = styled.div`
   ${tw`bg-gray-600 flex items-center py-4 px-5`}
   min-height: 76px;
 
-  @media (min-width: 768px) and (max-width: 882px) {
+  @media (min-width: 768px) and (max-width: 1004px) {
     min-height: 95px;
     ${tw`items-start`}
   }
